@@ -1,0 +1,1 @@
+- [John's professional positioning](user_professional_positioning.md) — five specializations (fintech/trading, blockchain, architecture, AI, leadership); don't lead with blockchain; AI agents should be explicit
