@@ -1,0 +1,298 @@
+# Soundbeats / Sui GameFi Token + NFT Infrastructure
+
+## Basic Info
+
+**Project:** Soundbeats
+**Domain:** GameFi, music gaming, Sui blockchain, NFTs, tokenized in-game rewards
+**Role / Title:** Sole Blockchain Engineer / Web3 Backend Engineer
+**Ownership:** Sole blockchain engineer working with designers, game developers, and marketing
+**Status:** Early prototype / proof-of-concept stage
+**Primary Stack:** Sui Move, Sui blockchain, NestJS, REST APIs, Unity, Google OAuth
+
+---
+
+## Canonical Summary
+
+Built the blockchain and backend integration layer for Soundbeats, a GameFi project designed to “gamify music” by allowing users to create Beat Saber-like courses for songs. Created Sui Move smart contracts for fungible in-game points and NFT-based characters/avatars, implemented built-in on-chain tests, developed a secure NestJS REST API for game-to-blockchain minting flows, and created Unity proof-of-concepts for authentication, API communication, and smart-wallet onboarding.
+
+---
+
+## Short Resume Summary Version
+
+Sole blockchain engineer for a Sui-based GameFi prototype, building Move smart contracts for in-game points and NFT avatars, secure NestJS minting/authentication APIs, Unity integration proofs-of-concept, and Google OAuth smart-wallet onboarding.
+
+---
+
+## Primary Tags
+
+* Sui
+* Sui Move
+* Move smart contracts
+* GameFi
+* Blockchain gaming
+* NFT
+* Fungible token
+* Token minting
+* NFT minting
+* NestJS
+* REST API
+* Unity
+* Google OAuth
+* Smart wallets
+* Authentication
+* Backend security
+* Web3 integration
+* Sole ownership
+* Prototype development
+* Cross-functional collaboration
+
+---
+
+## Context
+
+Soundbeats was a GameFi project focused on “gamifying music.” The core product concept allowed users to create their own Beat Saber-like courses for songs, combining music, gameplay, user-generated content, tokenized rewards, and NFT-based characters or avatars.
+
+The project received some attention and investment during its early stage, despite being a relatively small GameFi prototype. The technical need was to connect a game client to a Sui blockchain backend in a secure and usable way.
+
+---
+
+## Role and Ownership
+
+I served as the sole blockchain engineer on the early prototype.
+
+I owned:
+
+* Sui Move smart contract development
+* Fungible token design for in-game points
+* NFT contract design for characters/avatars
+* Built-in Sui Move smart contract tests
+* Secure NestJS REST API development
+* Game-to-backend minting flow
+* Authentication proof-of-concept
+* Google OAuth proof-of-concept
+* Smart wallet creation proof-of-concept
+* Unity proof-of-concept for API communication and security
+
+I worked loosely with a broader team of designers, game developers, and marketing contributors while providing the blockchain/backend foundation for the early game prototype.
+
+---
+
+## Blockchain / Smart Contract Work
+
+Created Sui Move contracts for two major asset types:
+
+1. **Fungible in-game token**
+
+   * Used as points or rewards inside the game.
+   * Functionally analogous to an ERC-20-style asset, but implemented using Sui Move and Sui-native design patterns.
+
+2. **NFT assets**
+
+   * Used for characters or avatars.
+   * Functionally analogous to ERC-721-style NFTs, but implemented using Sui Move and Sui-native object ownership models.
+
+The contracts included built-in on-chain tests using Sui Move’s native testing features and followed Sui blockchain best practices for package structure, ownership, minting, and object handling.
+
+---
+
+## Backend / API Work
+
+Built a secure REST API using NestJS to allow the game code to communicate with the blockchain backend.
+
+The API supported:
+
+* Game-client authentication
+* Token minting
+* NFT minting
+* Backend-controlled mint authorization
+* Game-to-chain communication flows
+* Secure access between the game client and blockchain minting logic
+
+The API acted as the integration layer between the Unity/game client and the Sui blockchain contracts, preventing the game client from directly owning sensitive minting responsibilities.
+
+---
+
+## Unity / Game Integration Work
+
+Learned enough Unity to create proof-of-concept integrations before a dedicated game developer took over.
+
+Unity proof-of-concept work included:
+
+* REST API communication from the game client
+* Secure game-to-backend interaction flows
+* Authentication flow testing
+* Minting flow validation from game events
+* Early integration patterns for later game development
+
+This was not primarily a Unity developer role, but it demonstrated the ability to cross technical boundaries and validate the end-to-end gameplay-to-blockchain flow.
+
+---
+
+## Authentication / Smart Wallet Work
+
+Created a proof-of-concept for authentication and smart wallet creation using Google OAuth.
+
+This helped validate a smoother onboarding model for non-crypto-native game users, where users could authenticate through a familiar OAuth flow rather than manually managing blockchain wallet complexity from the beginning.
+
+---
+
+## Product / Cross-Functional Collaboration
+
+Worked with a loose early-stage team that included:
+
+* Designers
+* Game developers
+* Marketing contributors
+* Project/business stakeholders
+
+The work required translating a GameFi product concept into practical blockchain infrastructure: deciding how in-game points, NFTs, minting authority, authentication, and game-client communication should fit together in a prototype architecture.
+
+---
+
+# Bullet Bank
+
+## Strong General Bullets
+
+* Served as sole blockchain engineer for Soundbeats, a Sui-based GameFi prototype that used tokenized in-game points and NFT-based characters/avatars to support a music-gaming experience.
+
+* Built Sui Move smart contracts for fungible game points and NFT avatars, including built-in on-chain tests and Sui-native ownership/minting patterns.
+
+* Developed a secure NestJS REST API allowing game code to authenticate users and trigger controlled token/NFT minting flows.
+
+* Created Unity proof-of-concepts to validate secure REST API communication, authentication, and game-to-blockchain minting flows before a dedicated game developer took over.
+
+* Prototyped Google OAuth authentication and smart wallet creation to improve onboarding for non-crypto-native game users.
+
+---
+
+## Blockchain / Sui Bullets
+
+* Designed and implemented Sui Move contracts for fungible in-game points and NFT-based game assets, analogous to ERC-20/ERC-721 concepts but built using Sui-native Move patterns.
+
+* Used Sui Move’s built-in on-chain testing framework to validate token and NFT contract behavior.
+
+* Applied Sui blockchain best practices around object ownership, minting authority, and package-level contract structure.
+
+---
+
+## Backend / API Bullets
+
+* Built a NestJS REST API that acted as a secure bridge between the game client and Sui smart contracts.
+
+* Implemented backend-controlled minting workflows so game logic could award tokens and NFTs without exposing sensitive blockchain operations directly to the client.
+
+* Developed authentication and minting endpoints for game-client integration with Sui token and NFT contracts.
+
+---
+
+## Game / Unity Integration Bullets
+
+* Learned Unity sufficiently to create proof-of-concept game integrations for REST API communication, authentication, and secure minting workflows.
+
+* Validated end-to-end gameplay-to-backend-to-blockchain flows before handoff to a dedicated game developer.
+
+---
+
+## Product / Startup Bullets
+
+* Worked cross-functionally with designers, game developers, marketing, and business stakeholders on an early GameFi prototype that received outside attention and investment.
+
+* Helped translate a music-gaming product concept into practical blockchain infrastructure for tokens, NFTs, authentication, and backend-controlled minting.
+
+---
+
+# Strongest Resume Angles
+
+## Blockchain / Web3 Roles
+
+Emphasize:
+
+* Sui Move
+* Move smart contracts
+* Fungible token design
+* NFT design
+* On-chain tests
+* Sui-native asset patterns
+* Minting authority
+* GameFi integration
+
+This is useful as evidence of non-EVM blockchain breadth.
+
+---
+
+## Backend / API Roles
+
+Emphasize:
+
+* NestJS REST API
+* Secure game-to-backend integration
+* Authentication
+* Backend-controlled minting
+* Client/server boundary
+* Blockchain API integration
+
+This project shows backend security and product integration more than deep backend scale.
+
+---
+
+## Product / Startup Roles
+
+Emphasize:
+
+* Early prototype
+* Cross-functional team
+* Designers/game developers/marketing
+* Rapid learning
+* Unity proof-of-concept
+* Google OAuth onboarding
+* Smart wallet UX
+
+This works well as an example of being adaptable in an early-stage startup environment.
+
+---
+
+## GameFi / Gaming Roles
+
+Emphasize:
+
+* In-game points
+* NFT avatars
+* Unity integration
+* Game client to blockchain backend
+* Music gaming / Beat Saber-like user-generated courses
+* Player onboarding through OAuth/smart wallets
+
+---
+
+# ATS / Keyword Bank
+
+## Blockchain / Web3 Keywords
+
+Sui, Sui Move, Move smart contracts, blockchain gaming, GameFi, NFT, fungible token, token minting, NFT minting, smart contracts, on-chain tests, tokenomics, digital assets, wallet onboarding, smart wallets, object ownership, mint authority.
+
+## Backend / API Keywords
+
+NestJS, REST API, authentication, authorization, secure API design, backend integration, API security, token issuance, minting service, server-side minting, game backend, client-server architecture.
+
+## Gaming / Product Keywords
+
+Unity, game client integration, GameFi prototype, in-game points, NFT avatars, characters, user-generated content, music gaming, Beat Saber-like gameplay, cross-functional collaboration, early-stage product development.
+
+## Startup / Ownership Keywords
+
+Sole blockchain engineer, prototype development, proof of concept, cross-functional team, product validation, technical ownership, rapid learning, startup environment.
+
+---
+
+# Missing / Worth Clarifying
+
+1. Approximate dates.
+2. Whether contracts were deployed to Sui testnet, devnet, or mainnet.
+3. Whether the token/NFT packages were ever used by real users or only in prototype/demo flows.
+4. Specific API security model: JWT, signed requests, API keys, session auth, wallet signatures, rate limits, replay protection, etc.
+5. Whether the Google OAuth smart-wallet flow used zkLogin, sponsored transactions, custodial wallets, or another account-abstraction-style pattern.
+6. Whether the REST API held mint authority directly, delegated minting, or called through an admin/service wallet.
+7. Whether NFTs had metadata, upgradeable traits, rarity, images, or dynamic attributes.
+8. Whether tokens had supply caps, admin minting, burn mechanics, transfer restrictions, or treasury controls.
+9. Whether there was any CI/test automation around Sui Move or NestJS.
+10. Whether there is a safe way to describe the attention/investment the project received.
