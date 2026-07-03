@@ -1,0 +1,648 @@
+# Skunk Capital / Cash-and-Carry Crypto Arbitrage Trading System
+
+## Source Notes
+
+This entry combines:
+
+- Old resume source material for Skunk Capital, including client, dates, original stack, profitable cash-and-carry arbitrage system, exchange API work, exchange plugins, WebSockets, AWS, and rigorous testing.
+- Later user clarifications supplied during resume rework, including sole ownership, supported exchanges, execution behavior, cost modeling, dashboard, production status, and remaining uncertainties.
+
+Use this as a master-resume evidence-bank entry, not as a finished resume section. It intentionally preserves detail, caveats, and reusable bullet variants.
+
+---
+
+## Basic Info
+
+**Client:** Skunk Capital  
+**Location:** Remote / Perth, Australia  
+**Dates:** 2017–2019  
+**Role / Title:** Algorithmic Trading Systems Engineer / Crypto Trading Bot Architect  
+**Ownership:** Sole architect and developer  
+**Status:** Production system; ran continuously for periods of time; client reported strong success/profitability  
+**Primary Domain:** Crypto trading, futures/spot arbitrage, cash-and-carry arbitrage, automated trading, exchange integrations  
+**Capital Scale:** Client tested with approximately **$100K USD at a time**, exact P&L/ROI unknown  
+**Primary Stack:** NodeJS / JavaScript, AWS EC2, AWS Lambda, DynamoDB, MySQL, MongoDB, AWS S3, ReactJS, WebSockets  
+**Exchange Coverage:** BitMEX and Bitfinex initially; later Kraken and Binance  
+**Strategy Type:** Cash-and-carry arbitrage between crypto spot and standard futures markets  
+**Note on Perpetuals:** Use “futures” externally. Avoid claiming perpetual swaps unless later confirmed.
+
+---
+
+## Canonical Summary
+
+Served as sole architect and developer for Skunk Capital’s profitable crypto cash-and-carry arbitrage trading system, built to exploit pricing discrepancies between cryptocurrency spot and futures markets. The system monitored real-time market data from exchanges including BitMEX, Bitfinex, Kraken, and Binance; modeled funding rates, borrow costs, trading fees, and slippage; executed both spot and futures legs automatically; managed open positions through unwind/closeout logic; and handled partial fills, failed legs, retries, and rate limits. Built primarily in NodeJS/JavaScript on AWS, with MySQL-centered persistence, ReactJS dashboarding, WebSocket exchange feeds, custom exchange plugins, and homemade logging, monitoring, and alerting.
+
+---
+
+## Short Resume Summary Version
+
+Sole architect and developer of a profitable crypto cash-and-carry arbitrage bot for Skunk Capital, using NodeJS, AWS, WebSockets, MySQL, ReactJS, and exchange plugins for BitMEX, Bitfinex, Kraken, and Binance to execute automated futures/spot arbitrage trades with fee, slippage, borrow-cost, funding-rate, partial-fill, failed-leg, retry, and rate-limit handling.
+
+---
+
+## Primary Tags
+
+- Crypto trading
+- Algorithmic trading
+- Automated trading
+- Cash-and-carry arbitrage
+- Futures/spot arbitrage
+- Basis trading
+- Market data
+- Real-time trading
+- Exchange APIs
+- WebSockets
+- NodeJS
+- JavaScript
+- AWS
+- AWS EC2
+- AWS Lambda
+- DynamoDB
+- MongoDB
+- MySQL
+- AWS S3
+- ReactJS
+- Plugin architecture
+- Trading infrastructure
+- TDD
+- Financial systems
+- API integration
+- Production trading system
+- Position management
+- Partial-fill handling
+- Failed-leg handling
+- Rate-limit handling
+- Retry logic
+- Monitoring
+- Alerting
+
+---
+
+## Context
+
+Skunk Capital wanted an automated system to exploit arbitrage opportunities between cryptocurrency futures and spot markets.
+
+This was a cash-and-carry strategy: the system identified cases where futures and spot markets diverged enough to justify opening paired positions, after accounting for costs and execution risk. The bot then automatically executed both legs, tracked the position, and unwound it when conditions justified closing.
+
+This was the user's first trading bot, but it became a substantial production system. It reportedly performed very successfully, and the client had enough confidence in it to test with approximately six-figure capital allocations.
+
+For external resumes, the safest phrasing is:
+
+> Built a profitable production crypto arbitrage bot used with six-figure test capital allocations.
+
+Avoid claiming exact ROI, annualized return, total P&L, or AUM unless those numbers are later recovered.
+
+---
+
+## Role and Ownership
+
+The user was the **sole architect and developer**.
+
+Owned:
+
+- Trading-system architecture
+- Strategy implementation
+- Exchange API integrations
+- Exchange plugin architecture
+- Real-time market data handling
+- Futures/spot arbitrage logic
+- Automated two-leg execution
+- Cost modeling
+- Position tracking
+- Position unwind/closeout logic
+- Partial-fill handling
+- Failed-leg handling
+- Retry handling
+- Rate-limit handling
+- Persistence design
+- React dashboard
+- AWS deployment
+- Logging, monitoring, and alerts
+- Testing and debugging
+
+This should be positioned as an early but serious trading-infrastructure project: not as sophisticated as the later prediction-market and Solana systems, but strong because it was profitable, production-running, multi-exchange, automated, and fully owned.
+
+---
+
+## Trading / Strategy Model
+
+The strategy was **cash-and-carry arbitrage** between crypto spot and futures markets.
+
+The system modeled:
+
+- Funding rates
+- Borrow costs
+- Trading fees
+- Slippage
+
+The system executed:
+
+- Both legs automatically
+- Futures leg
+- Spot leg
+- Position tracking
+- Position unwind/closeout
+
+Execution handling included:
+
+- Partial fills
+- Failed legs
+- Retries
+- Rate limits
+
+Unclear / do not claim yet:
+
+- Stale price handling
+- Specific liquidation-risk controls
+- Exact margin management rules
+- Exact profitability
+- Exact number of trades
+- Exact uptime
+
+Safe external phrasing:
+
+> Built automated futures/spot arbitrage logic that modeled funding rates, borrow costs, trading fees, and slippage before executing paired cash-and-carry trades.
+
+Stronger external phrasing:
+
+> Built automated two-leg execution and position-management workflows for crypto futures/spot arbitrage, including partial-fill handling, failed-leg recovery, retries, rate-limit handling, and position unwind logic.
+
+---
+
+## Technical Architecture
+
+```text
+BitMEX / Bitfinex / Kraken / Binance
+        ↓
+Exchange API + WebSocket plugins
+        ↓
+Market data normalization
+        ↓
+Funding / borrow / fee / slippage model
+        ↓
+Futures/spot basis detection
+        ↓
+Cash-and-carry trade decision logic
+        ↓
+Automated two-leg execution
+        ↓
+Partial-fill / failed-leg / retry / rate-limit handling
+        ↓
+Position tracking and unwind logic
+        ↓
+MySQL-centered persistence
+        ↓
+ReactJS dashboard
+        ↓
+AWS EC2 / Lambda / S3 / DynamoDB
+        ↓
+Homemade logs / monitoring / alerts
+```
+
+---
+
+## Exchange Integration / Plugin Architecture
+
+The system started with **BitMEX** and **Bitfinex**, then expanded to **Kraken** and **Binance**.
+
+The plugin architecture allowed the bot to abstract exchange-specific API differences and support multiple trading venues.
+
+Exchange plugin responsibilities likely included:
+
+- Market data ingestion
+- WebSocket feed handling
+- REST API integration
+- Auth/signing
+- Order placement
+- Order status tracking
+- Account/balance reads
+- Futures/spot instrument mapping
+- Exchange-specific error handling
+- Rate-limit handling
+- Retry behavior
+
+Resume phrasing:
+
+> Built exchange-specific plugins for BitMEX, Bitfinex, Kraken, and Binance, abstracting market data, authentication, order placement, balance retrieval, rate limits, retries, and venue-specific API behavior behind a shared arbitrage execution framework.
+
+---
+
+## Execution / Order Management
+
+The system automatically executed both sides of the arbitrage.
+
+Confirmed capabilities:
+
+- Automatic spot/futures leg execution
+- Partial-fill handling
+- Failed-leg handling
+- Retry handling
+- Rate-limit handling
+- Position tracking
+- Position unwind/closeout
+
+Resume phrasing:
+
+> Implemented automated two-leg execution for futures/spot arbitrage trades, including partial-fill handling, failed-leg recovery, retry logic, rate-limit handling, position tracking, and unwind workflows.
+
+This is one of the most valuable details. It makes the entry much stronger than “called exchange APIs.”
+
+---
+
+## Dashboard / Monitoring
+
+There was a ReactJS dashboard.
+
+Confirmed:
+
+- ReactJS frontend existed.
+- Logs, monitoring, and alerts existed.
+- Monitoring/alerting was mostly homemade.
+- Mailchimp and/or SendGrid may have been used for alert delivery.
+
+External-safe phrasing:
+
+> Built a ReactJS dashboard and homemade monitoring/alerting workflows to provide operational visibility into automated trading activity, exchange integrations, and system state.
+
+Do not claim Mailchimp or SendGrid unless later confirmed.
+
+---
+
+## Persistence / Data Storage
+
+The user currently recollects **MySQL** as the primary persistence layer.
+
+The old resume also lists DynamoDB, MongoDB, and S3. Treat those as supporting/auxiliary unless clarified.
+
+Safe phrasing:
+
+> Used MySQL-centered persistence with supporting AWS storage services to track trading state, exchange data, configuration, logs, and operational records.
+
+Possible master-file note:
+
+- MySQL: likely primary relational trading-state storage
+- DynamoDB: listed in old resume, exact role unknown
+- MongoDB: listed in old resume, exact role unknown
+- S3: likely storage/archive/log support, exact role unknown
+
+---
+
+## Reliability / Testing
+
+Confirmed:
+
+- Rigorously tested
+- Tested/debugged across exchange APIs
+- Handled real exchange edge cases
+- Ran continuously in production for periods of time
+
+Reliability features:
+
+- Partial-fill handling
+- Failed-leg handling
+- Retry logic
+- Rate-limit handling
+- Logs
+- Monitoring
+- Alerts
+- Exchange plugin debugging
+- Production runtime hardening
+
+Resume phrasing:
+
+> Hardened the system for real exchange behavior, including partial fills, failed legs, retries, rate limits, API differences, logging, monitoring, alerting, and continuous production operation.
+
+---
+
+# Bullet Bank
+
+## Strong General Bullets
+
+- Served as sole architect and developer of a profitable crypto cash-and-carry arbitrage trading system for Skunk Capital, exploiting pricing discrepancies between cryptocurrency futures and spot markets.
+
+- Built a production NodeJS/AWS trading bot integrating BitMEX, Bitfinex, Kraken, and Binance through exchange-specific plugins, WebSockets, automated execution workflows, and a ReactJS dashboard.
+
+- Developed automated futures/spot arbitrage workflows that modeled funding rates, borrow costs, trading fees, and slippage before executing paired trades.
+
+- Built a real-time crypto trading system that ran continuously in production for periods of time and was reportedly tested with six-figure capital allocations.
+
+---
+
+## Trading / Arbitrage Bullets
+
+- Implemented automated cash-and-carry arbitrage logic for crypto futures and spot markets, including basis detection, cost modeling, two-leg execution, position tracking, and unwind logic.
+
+- Modeled funding rates, borrow costs, trading fees, and slippage to determine whether futures/spot arbitrage opportunities were economically viable.
+
+- Built automated two-leg execution for futures/spot trades, including partial-fill handling, failed-leg recovery, retries, rate-limit handling, and position management.
+
+- Helped deliver a profitable automated crypto arbitrage system used by a capitalized trading client in live market conditions.
+
+---
+
+## Exchange Integration Bullets
+
+- Built exchange plugins for BitMEX, Bitfinex, Kraken, and Binance, abstracting exchange-specific APIs behind a shared trading execution framework.
+
+- Integrated real-time WebSocket market data and exchange REST APIs for market monitoring, account state, order placement, and trading workflow management.
+
+- Debugged and hardened exchange integrations across multiple crypto futures and spot venues, accounting for API differences, rate limits, retries, and execution edge cases.
+
+---
+
+## Backend / Cloud Bullets
+
+- Built NodeJS trading services on AWS using EC2, Lambda, MySQL, DynamoDB, MongoDB, S3, WebSockets, and exchange APIs.
+
+- Designed backend workflows for real-time market monitoring, futures/spot spread detection, automated trade execution, position tracking, logging, monitoring, and alerting.
+
+- Used MySQL-centered persistence with supporting AWS storage services for trading state, configuration, logs, and operational data.
+
+---
+
+## Frontend / Dashboard Bullets
+
+- Built a ReactJS dashboard for operational visibility into automated crypto arbitrage trading activity, exchange state, and system status.
+
+- Developed internal monitoring and alerting workflows for a continuously running production trading bot.
+
+---
+
+## Reliability / Production Bullets
+
+- Hardened a production trading bot against real exchange behavior including partial fills, failed legs, retries, rate limits, and venue-specific API inconsistencies.
+
+- Built homemade logging, monitoring, and alerting around a continuously running automated trading system.
+
+- Rigorously tested and debugged trading workflows and exchange plugins across multiple crypto futures and spot venues.
+
+---
+
+# Best External Resume Versions
+
+## Compact Trading Resume Bullet
+
+Sole architect and developer of a profitable crypto cash-and-carry arbitrage bot for Skunk Capital, using NodeJS, AWS, WebSockets, MySQL, ReactJS, and exchange plugins for BitMEX, Bitfinex, Kraken, and Binance to execute automated futures/spot arbitrage with funding, borrow-cost, fee, slippage, partial-fill, failed-leg, retry, and rate-limit handling.
+
+## Shorter Version
+
+Built a profitable NodeJS/AWS crypto cash-and-carry arbitrage bot integrating BitMEX, Bitfinex, Kraken, and Binance, with real-time WebSocket market data, automated futures/spot execution, cost modeling, position tracking, ReactJS dashboarding, and production monitoring.
+
+## Architecture-Focused Version
+
+Architected a multi-exchange crypto arbitrage platform with plugin-based exchange integrations, real-time market data normalization, futures/spot basis detection, automated two-leg execution, position tracking, MySQL persistence, AWS deployment, and ReactJS operational dashboarding.
+
+## Production Reliability Version
+
+Hardened a continuously running production trading bot against real exchange conditions, including partial fills, failed legs, retries, rate limits, API inconsistencies, logging, monitoring, alerting, and multi-venue execution edge cases.
+
+---
+
+# Strongest Resume Angles
+
+## Trading / Quant Developer Roles
+
+Emphasize:
+
+- Profitable trading system
+- Cash-and-carry arbitrage
+- Futures/spot basis
+- BitMEX / Bitfinex / Kraken / Binance
+- Real-time WebSockets
+- Automatic two-leg execution
+- Cost modeling
+- Position tracking
+- Partial fills / failed legs
+- Six-figure test capital, if safe
+
+## Backend / Real-Time Systems Roles
+
+Emphasize:
+
+- NodeJS
+- AWS
+- WebSockets
+- Exchange APIs
+- Plugin architecture
+- MySQL persistence
+- Dashboarding
+- Monitoring/alerting
+- Fault handling
+
+## Principal / Architecture Roles
+
+Emphasize:
+
+- Sole architect/developer
+- Exchange abstraction
+- Multi-venue architecture
+- Trading execution pipeline
+- Real-time data flow
+- Production operation
+- External API reliability
+
+## Crypto / Blockchain Roles
+
+Emphasize:
+
+- Crypto markets
+- Exchanges
+- Futures/spot trading
+- Arbitrage
+- BitMEX / Bitfinex / Kraken / Binance
+- Automated crypto infrastructure
+
+Avoid presenting this as smart-contract/blockchain protocol engineering. It is crypto market/trading infrastructure.
+
+---
+
+# ATS / Keyword Bank
+
+## Trading / Quant
+
+Algorithmic trading, automated trading, crypto trading, cash-and-carry arbitrage, futures/spot arbitrage, basis trading, spread trading, market data, real-time trading, trade execution, order management, position management, funding rates, borrow costs, trading fees, slippage, partial fills, failed legs, retries, rate limits, exchange APIs, WebSockets.
+
+## Crypto / Exchange
+
+BitMEX, Bitfinex, Kraken, Binance, cryptocurrency futures, spot markets, futures markets, exchange integration, exchange plugins, API adapters, market data feeds, order APIs, account APIs, real-time exchange data.
+
+## Backend / Cloud
+
+NodeJS, JavaScript, AWS, AWS EC2, AWS Lambda, DynamoDB, MongoDB, MySQL, AWS S3, WebSockets, ReactJS, backend services, real-time systems, cloud infrastructure, dashboarding, logging, monitoring, alerting.
+
+## Reliability / Engineering Quality
+
+TDD, rigorous testing, automated testing, integration testing, API testing, debugging, plugin architecture, external API integration, rate-limit handling, retry logic, fault handling, production monitoring.
+
+---
+
+# Future YAML Shape
+
+```yaml
+id: skunk_capital_cash_and_carry_arbitrage
+type: client_project
+name: Skunk Capital / Cash-and-Carry Crypto Arbitrage Trading System
+client: Skunk Capital
+location: Remote / Perth, Australia
+dates:
+  start: 2017
+  end: 2019
+role_title: Algorithmic Trading Systems Engineer / Crypto Trading Bot Architect
+ownership:
+  - sole_architect
+  - sole_developer
+  - exchange_integration_owner
+  - trading_system_owner
+status:
+  production: true
+  ran_continuously_for_periods: true
+  profitable_reported_by_client: true
+capital_scale:
+  tested_with_approximately_100k_usd_at_a_time: true
+  exact_pnl_unknown: true
+domains:
+  - crypto_trading
+  - algorithmic_trading
+  - automated_trading
+  - cash_and_carry_arbitrage
+  - futures_spot_arbitrage
+  - real_time_trading
+  - exchange_integrations
+exchanges:
+  initial:
+    - BitMEX
+    - Bitfinex
+  later:
+    - Kraken
+    - Binance
+strategy:
+  type: cash_and_carry_arbitrage
+  markets:
+    - crypto_spot
+    - crypto_futures
+  futures_type: standard_futures
+  perpetuals_confirmed: false
+  modeled:
+    - funding_rates
+    - borrow_costs
+    - trading_fees
+    - slippage
+  automated_execution:
+    both_legs: true
+    partial_fill_handling: true
+    failed_leg_handling: true
+    retry_handling: true
+    rate_limit_handling: true
+    stale_price_handling: unknown
+    position_tracking: true
+    position_unwind_logic: true
+backtesting:
+  included: false
+technologies:
+  languages:
+    - NodeJS
+    - JavaScript
+  frontend:
+    - ReactJS
+  cloud:
+    - AWS_EC2
+    - AWS_Lambda
+    - AWS_S3
+  databases:
+    primary_probable:
+      - MySQL
+    supporting_or_legacy:
+      - DynamoDB
+      - MongoDB
+  realtime:
+    - WebSockets
+architecture_layers:
+  - exchange_api_plugins
+  - websocket_market_data
+  - market_data_normalization
+  - funding_borrow_fee_slippage_model
+  - futures_spot_basis_detection
+  - arbitrage_decision_logic
+  - automated_two_leg_execution
+  - partial_fill_failed_leg_retry_rate_limit_handling
+  - position_tracking
+  - position_unwind_logic
+  - mysql_centered_persistence
+  - react_dashboard
+  - homemade_logging_monitoring_alerting
+alerts:
+  homemade: true
+  mailchimp_or_sendgrid_possible: true
+  exact_provider: unknown
+business_outcome:
+  - profitable_client_reported
+  - tested_with_six_figure_capital_allocations
+notes:
+  - First trading bot; do not mention externally unless useful in narrative/interview.
+  - Use real-time rather than low-latency unless a specific job posting benefits from stronger wording.
+  - Do not claim exact ROI, AUM, PnL, uptime, stale-price handling, or backtesting unless later confirmed.
+```
+
+---
+
+# Remaining Missing / Worth Clarifying Later
+
+1. Exact exchanges’ product types: dated futures only, margin spot, lending/borrow source, etc.
+2. Whether BitMEX leg was futures only and Bitfinex leg was spot/borrow side.
+3. Whether the system handled collateral transfers or only exchange-local balances.
+4. Whether it had liquidation checks or margin-ratio monitoring.
+5. Exact dashboard features.
+6. Exact alerting provider: Mailchimp, SendGrid, or both.
+7. Exact role of DynamoDB, MongoDB, MySQL, and S3.
+8. Any safe success metric: approximate monthly return, number of trades, duration of profitable operation, or capital range.
+9. Whether “funding rates” meant futures basis/funding economics generally, or actual exchange funding payments.
+10. Whether “standard futures” should be phrased as “futures/perpetuals” if later memory confirms perps were involved.
+
+---
+
+# External Claim Safety Notes
+
+## Safe to Claim
+
+- Sole architect and developer.
+- Profitable according to client report.
+- Production system.
+- Ran continuously for periods of time.
+- Client tested with approximately $100K USD at a time.
+- BitMEX, Bitfinex, Kraken, and Binance support.
+- Cash-and-carry arbitrage between crypto futures and spot markets.
+- Automatic execution of both legs.
+- Modeled funding rates, borrow costs, trading fees, and slippage.
+- Handled partial fills, failed legs, retries, and rate limits.
+- React dashboard existed.
+- Logs, monitoring, and alerts existed.
+- No backtesting.
+- Mostly NodeJS rather than TypeScript.
+- “Real-time” is safer than “low-latency.”
+
+## Avoid Unless Later Confirmed
+
+- Exact P&L.
+- Exact ROI.
+- Exact annualized return.
+- Exact AUM.
+- Exact uptime.
+- Exact trade count.
+- Stale-price handling.
+- Specific liquidation-risk controls.
+- Whether the futures were dated futures only or included perpetuals.
+- Exact alerting provider.
+- Exact database split between MySQL, DynamoDB, MongoDB, and S3.
+
+---
+
+# Relative Positioning Against Later Trading Projects
+
+Compared with later trading projects:
+
+- **Skunk Capital** is strongest as an early production crypto arbitrage / exchange-integration story.
+- **Leeds Rising** is stronger as a stock-market automated short-trading story.
+- **Prediction Markets Trading Engine** is stronger as a modern quant research, backtesting, optimization, AI, and live-execution platform.
+- **Solana Copy-Trading Bot** is stronger as a modern low-latency Rust/Solana execution and wallet-analytics story.
+
+For resumes, Skunk Capital is best used to show long-running continuity in trading systems: the user has been building automated trading infrastructure since at least 2017, not just recently.

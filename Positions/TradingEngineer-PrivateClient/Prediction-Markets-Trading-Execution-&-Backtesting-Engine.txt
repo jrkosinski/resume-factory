@@ -1,0 +1,461 @@
+# Prediction Markets Trading Execution & Backtesting Engine
+
+## Basic Info
+
+**Client:** Private trader client
+**Dates:** January 2026 – Present
+**Role / Title:** AI/Trading Systems Engineer
+**Ownership:** Sole architect and developer
+**Status:** Ongoing; partially delivered; live in production
+**Production Status:** Real-money trading system, currently profitable at small but increasing scale
+**Supported Markets:** Kalshi, Polymarket
+**Third-Party Data / APIs:** Kalshi, Polymarket, ESPN
+**Primary Stack:** TypeScript, Python, PostgreSQL, Google Bigtable, Vite, Tailwind, Optuna, Claude Code, MCP, Claude Skills
+
+---
+
+## Canonical Summary
+
+Built and operate a production prediction-markets trading execution and backtesting platform for a private trader client, supporting real-money trading on Kalshi and Polymarket, modular TypeScript strategy development, historical backtesting, Bayesian parameter optimization, AI-assisted strategy analysis, and live trading control through a custom frontend.
+
+---
+
+## Short Resume Summary Version
+
+Sole architect and developer of a live, real-money prediction-markets trading platform for Kalshi and Polymarket, combining TypeScript strategy execution, PostgreSQL/Bigtable market-data pipelines, Python/Optuna backtest optimization, and embedded LLM agents for strategy analysis, diagnostics, and parameter tuning.
+
+---
+
+## Primary Tags
+
+* AI
+* Trading
+* Prediction markets
+* Fintech
+* Quant trading
+* Market making
+* Backtesting
+* Strategy optimization
+* Bayesian optimization
+* LLM agents
+* TypeScript
+* Python
+* PostgreSQL
+* Google Bigtable
+* Kalshi
+* Polymarket
+* Architecture
+* Solo ownership
+* Client-facing
+* Production systems
+
+---
+
+## Context
+
+The client had existing prediction-market strategies that were underperforming, high-risk, and producing unreliable P&L. The project was created to provide a more disciplined trading and research system: one that could ingest historical data, test strategies before forward deployment, compare performance, tune parameters, and cautiously move successful strategies into live trading.
+
+The system now supports production real-money execution and is currently in a small-profit phase, with scale increasing cautiously as strategies are tuned and validated.
+
+---
+
+## Role and Ownership
+
+I am the sole architect and developer for this project.
+
+I own:
+
+* Client relationship and requirements translation
+* System architecture
+* Trading execution design
+* Backtesting engine
+* Strategy framework
+* Data ingestion and storage flow
+* AI-agent integration
+* Frontend implementation
+* Testing, diagnostics, and production operation
+
+This project involves both deep technical ownership and direct client-facing consulting work, including translating trader goals into concrete system architecture, strategy workflows, and production controls.
+
+---
+
+## Technical Architecture
+
+### System Layers
+
+```text
+Kalshi / Polymarket / ESPN APIs
+        ↓
+Google Bigtable historical data storage
+        ↓
+PostgreSQL import layer
+        ↓
+Backtesting engine
+        ↓
+Bayesian optimization / metrics / strategy comparison
+        ↓
+AI-assisted analysis and strategy generation
+        ↓
+Frontend for backtesting, optimization, and live execution
+        ↓
+Live trading execution on Kalshi / Polymarket
+```
+
+---
+
+## Strategy Framework
+
+Strategies are represented as TypeScript classes that conform to a shared strategy interface. Each strategy has its own configuration/options, allowing the system to run, backtest, compare, optimize, and deploy different strategy families through a common framework.
+
+Successful strategies include:
+
+* Avellaneda-Stoikov market making
+* OFI market making
+* Modified Dutch Arbitrage spread-capture for ranging markets
+* Additional strategy variants
+
+This is a significant architecture detail because the system is designed as a reusable strategy platform, not a collection of isolated trading scripts.
+
+Possible future phrasing:
+
+> Designed a modular TypeScript strategy framework where each strategy is implemented as a class behind a shared interface, enabling consistent backtesting, optimization, comparison, and live execution across multiple strategy families.
+
+---
+
+## Backtesting Engine
+
+The backtesting engine supports:
+
+* Historical simulation
+* Train/test split
+* Strategy-specific options
+* Side-by-side strategy comparison
+* Saved backtest runs
+* Saved optimization runs
+* Bayesian optimization through Optuna
+* Detailed metrics and diagnostics
+
+Metrics include:
+
+* Calmar ratio
+* Profit Factor
+* Raw P&L
+* Max drawdown
+* Inventory risk
+* Win rate
+* ROI
+* Expectancy
+* Sharpe ratio
+
+The backtester models:
+
+* Fees
+* Slippage
+* Latency
+
+It does not currently model:
+
+* Partial fills
+* Order-book depth
+
+---
+
+## AI / Agent Layer
+
+The system includes embedded LLM-wrapper agents. They are intentionally lightweight rather than LangChain-based because the current complexity does not justify a heavier orchestration framework.
+
+Agent capabilities include:
+
+* Trading analysis
+* Backtesting analysis
+* Parameter tuning suggestions
+* Strategy creation
+* Strategy-code generation
+* Diagnostic parsing
+* Result explanation
+
+Agent styles include:
+
+* Tool-using
+* Structured-output
+* Free-output
+* Workflow-based
+
+Guardrails:
+
+* Agents do not have access to sensitive data.
+* AI outputs can optionally be saved with backtest sessions for audit/review.
+
+Potential future phrasing:
+
+> Embedded lightweight LLM-wrapper agents into the trading platform to assist with strategy-code generation, diagnostic parsing, backtest interpretation, parameter tuning, and trading analysis.
+
+---
+
+## Frontend
+
+Frontend stack:
+
+* TypeScript
+* Vite
+* Tailwind
+
+The frontend exposes:
+
+* Saved backtest runs and metrics
+* Backtest optimization runs and metrics
+* Historical live trade sessions
+* Ongoing live trade sessions
+* Account data
+* Saved parameter sets for strategies
+* Strategy generation screen
+* Live trading controls
+
+  * start/stop trading
+  * choose strategy
+  * configure strategy parameters
+* Dashboards/charts for backtest results
+* Dashboards/charts for live trade session results
+* AI commentary/analysis where applicable
+
+---
+
+## Reliability / Engineering Quality
+
+Current reliability features:
+
+* Automated tests
+* Logging
+* Built-in diagnostics
+* Strategy comparison before live deployment
+* More deterministic strategy validation before forward-testing
+* Cautious scaling of capital as strategies prove themselves
+
+Potential areas to expand later:
+
+* Deployment/infrastructure details
+* Risk controls
+* Strategy config versioning
+* Backtest session persistence details
+* Live-trading safety mechanisms
+* Monitoring/alerting
+* Production incident handling, if any
+
+---
+
+## Business / Client Impact
+
+Before the project, the client had:
+
+* Poor-performing strategies
+* High risk
+* Unreliable P&L
+* Less disciplined strategy validation
+
+After my work, the client has:
+
+* Better-performing strategies
+* More deterministic strategy behavior
+* Better-tested strategies before forward-testing live
+* Reduced strategy iteration time
+* Improved profitability
+* Improved consistency
+* Better trading decision support
+
+Quantitative results are still pending and can be added later once they can be safely disclosed.
+
+---
+
+# Bullet Bank
+
+## Strong General Bullets
+
+* Sole architect and developer of a live, real-money prediction-markets trading platform for a private trader client, supporting Kalshi and Polymarket execution, historical backtesting, strategy optimization, and AI-assisted analysis.
+
+* Built a modular TypeScript strategy framework where trading strategies are implemented as classes behind a shared interface, enabling consistent backtesting, optimization, comparison, and live execution across multiple strategy families.
+
+* Designed and implemented a full-stack trading research and execution platform spanning API ingestion, Google Bigtable historical storage, PostgreSQL-backed backtesting, Python/Optuna optimization, embedded LLM agents, and a TypeScript/Vite/Tailwind frontend.
+
+---
+
+## Trading / Quant Bullets
+
+* Implemented and tested prediction-market strategies including Avellaneda-Stoikov market making, OFI market making, and a modified Dutch Arbitrage spread-capture strategy for ranging markets.
+
+* Built a configurable backtesting engine with train/test split support, side-by-side strategy comparison, strategy-specific parameter sets, and metrics including Calmar ratio, Profit Factor, P&L, drawdown, inventory risk, ROI, expectancy, Sharpe ratio, and win rate.
+
+* Modeled fees, slippage, and latency in historical backtests to improve the reliability of strategy evaluation before forward-testing and live deployment.
+
+* Helped move the client from high-risk, unreliable strategy behavior toward more deterministic, better-tested strategies that are currently producing small but increasing real-money profits.
+
+---
+
+## AI / Agent Bullets
+
+* Embedded lightweight LLM-wrapper agents into the trading platform to assist with strategy-code generation, diagnostic parsing, backtest interpretation, parameter tuning, and trading analysis.
+
+* Designed agent workflows using tool use, structured outputs, free-form analysis, and workflow-based execution without introducing unnecessary orchestration complexity.
+
+* Added guardrails around AI-agent behavior by preventing access to sensitive data and optionally saving AI outputs with backtest sessions for review.
+
+---
+
+## Data Engineering Bullets
+
+* Built market-data ingestion workflows for Kalshi, Polymarket, and ESPN data, storing historical data in Google Bigtable and importing it into PostgreSQL for backtesting and analysis.
+
+* Designed data flows supporting historical strategy research, optimization, live trading diagnostics, saved parameter sets, and ongoing trade-session review.
+
+---
+
+## Full-Stack Bullets
+
+* Built a TypeScript/Vite/Tailwind frontend exposing saved backtests, optimization runs, live trade sessions, account data, strategy parameter sets, dashboards, AI-assisted strategy generation, and live trading controls.
+
+* Developed full-stack workflows allowing the client to launch backtests, run optimization, compare strategies, review metrics, edit parameters, view dashboards, and start or stop live trading sessions.
+
+---
+
+## Consulting / Ownership Bullets
+
+* Owned the full client relationship and requirements translation for a high-ambiguity private trading system, converting trader goals into production architecture, backtesting workflows, live execution controls, and AI-assisted analysis tools.
+
+* Delivered a partially complete but already-live production trading platform that is being cautiously scaled as strategies demonstrate profitable behavior.
+
+---
+
+# Strongest Resume Angles
+
+## AI Engineering Roles
+
+Emphasize:
+
+* Embedded LLM agents
+* Tool use and structured outputs
+* AI-assisted diagnostics
+* Strategy-code generation
+* Parameter-tuning assistance
+* Optional audit/review of AI outputs
+* Production system integration
+
+This project works well as evidence of AI embedded into a serious domain workflow, not just a chatbot.
+
+---
+
+## Trading / Quant Developer Roles
+
+Emphasize:
+
+* Kalshi and Polymarket
+* Real-money production trading
+* Market making
+* Avellaneda-Stoikov
+* OFI
+* Backtesting
+* Optuna/Bayesian optimization
+* Train/test split
+* Fees/slippage/latency modeling
+* Strategy comparison
+* P&L/risk metrics
+
+---
+
+## Principal Engineer / Architecture Roles
+
+Emphasize:
+
+* Sole architect/developer
+* Shared strategy interface
+* Live/backtest architecture
+* TypeScript + Python hybrid system
+* Google Bigtable → PostgreSQL analytical flow
+* Full-stack execution/control system
+* Client-facing requirements ownership
+
+---
+
+## Freelance / Consulting Roles
+
+Emphasize:
+
+* Private client
+* Full relationship ownership
+* Ambiguous trading requirements translated into working production system
+* Measurable client improvement
+* Cautious real-money rollout
+* Ongoing iteration and production support
+
+---
+
+# Future YAML Shape
+
+This project should eventually become one YAML file resembling:
+
+```yaml
+id: prediction_markets_trading_engine
+type: client_project
+name: Prediction Markets Trading Execution & Backtesting Engine
+client: Private Trader Client
+dates:
+  start: 2026-01
+  end: present
+role_title: AI/Trading Systems Engineer
+ownership:
+  - sole_architect
+  - sole_developer
+  - client_relationship_owner
+status:
+  ongoing: true
+  partially_delivered: true
+  production: true
+  real_money: true
+  profitable: true
+domains:
+  - prediction_markets
+  - trading
+  - fintech
+  - ai
+  - quant_trading
+  - backtesting
+markets:
+  - Kalshi
+  - Polymarket
+apis:
+  - Kalshi
+  - Polymarket
+  - ESPN
+technologies:
+  languages:
+    - TypeScript
+    - Python
+  databases:
+    - PostgreSQL
+    - Google Bigtable
+  frontend:
+    - Vite
+    - Tailwind
+  optimization:
+    - Optuna
+  ai:
+    - LLM wrapper agents
+    - Claude Code
+    - MCP
+    - Claude Skills
+```
+
+---
+
+# Remaining High-Value Missing Details
+
+The entry is already strong. The most valuable future additions would be:
+
+1. Approximate profitability or improvement metrics that can be safely disclosed.
+2. Number of strategies tested/generated.
+3. Number of backtest runs or optimization runs, if meaningful.
+4. Data scale: markets, events, rows, or historical time period ingested.
+5. Deployment/infrastructure details.
+6. Live trading risk controls: position limits, max exposure, stop conditions, manual approvals, emergency stop behavior, etc.
+7. Whether strategy configs/backtest sessions are versioned.
+8. Whether the same strategy code path is used for both backtesting and live execution.
+9. Any examples of specific strategy improvements from before/after tuning.
+10. Any examples of AI agent output improving strategy development or diagnosis.
