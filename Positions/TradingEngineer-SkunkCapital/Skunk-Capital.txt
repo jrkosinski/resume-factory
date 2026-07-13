@@ -378,6 +378,16 @@ Resume phrasing:
 
 ---
 
+# Published Resume Bullets (from OldResumes/)
+
+These exact bullets appeared in a published resume and are pre-vetted for external use. Prefer these phrasings as a base when compiling future resumes — they are tight and production-tested.
+
+- Automated previously manual cash-and-carry arbitrage strategies with real capital
+- Designed trading infrastructure for durability and longevity
+- System operated with **hundreds of thousands USD in deployed capital**
+
+---
+
 # Best External Resume Versions
 
 ## Compact Trading Resume Bullet

@@ -926,6 +926,19 @@ Use the most precise version once the metric is clarified.
 
 ---
 
+# Published Resume Bullets (from OldResumes/)
+
+These exact bullets appeared in a published resume and are pre-vetted for external use. Prefer these phrasings when compiling future resumes — they are concise, metric-specific, and production-tested.
+
+- Designed and implemented mission-critical on-chain financial primitives supporting bond rollover and compounding yield
+- Implemented system and security architecture for the back-office settlement system driving bond vault operations
+- Systems secured **hundreds of millions USD in TVL** at peak during initial phase
+- Foundation later enabled a **lucrative stablecoin product locking hundreds of thousands USD in TVL**
+- Operated with only one junior developer; security and correctness were non-negotiable
+- Made irreversible architectural decisions under capital-at-risk constraints
+
+---
+
 # Bullet Bank
 
 ## Strong General Bullets
