@@ -40,7 +40,7 @@ at what a company wants.
    separately covers CTO/leadership, payments/fintech, blockchain, and
    e-commerce angles) — score relevance per domain, not just per position, since
    one position can contribute to a resume for more than one reason. Positions
-   with only diagrams and no write-up (currently Budgie, Quantgenie) can only
+   with only diagrams and no write-up (currently Budgie) can only — check whether a write-up now exists before treating a position as diagram-only
    contribute what's visible in the diagrams — don't fabricate narrative for them.
 
 4. **Pick the lineup.** Choose the 3-5 positions with the strongest combined
@@ -77,10 +77,55 @@ at what a company wants.
    to soften or omit for lack of evidence — this is for the user's review, not
    for the final resume.
 
-8. **Hand off.** Tell the user the draft is ready for review at that path, and
-   that turning it into the final PDF/DOCX still requires pasting it into the
-   `ResumeFormatGuides` template — this skill doesn't touch the styled DOCX/PDF
-   directly.
+8. **Check the OldResumes/ folder for mergeable content.** Before generating the
+   DOCX, read the PDFs in `OldResumes/` and identify any bullets or phrasings for
+   positions that also appear in this tailored resume that are sharper, more
+   specific, or contain concrete metrics not present in the evidence-bank draft.
+   Prefer the old resume's wording where it is demonstrably stronger (e.g. specific
+   TVL numbers, capital figures, production outcomes). Do not pull in old resume
+   content for positions that are not already in the tailored lineup.
+
+9. **Generate the DOCX** at `TailoredResumes/<Company>-<RoleTitle>/Resume.docx`
+   using `python-docx` (`pip install python-docx --break-system-packages` if
+   needed). Load `ResumeFormatGuides/John.R.Kosinski.docx` as the style source —
+   clear its body content, then rebuild from scratch using the merged draft
+   content. Style mapping:
+   - Name → `Heading 1`
+   - Subtitle / email / body text / bullet lines / date lines → `normal`
+   - Section headers (SUMMARY, CORE CAPABILITIES, etc.) → `Heading 2`
+   - Company/role headers → `Heading 3`
+
+   For bullet-point paragraphs (capabilities, experience bullets, principles, tools,
+   additional experience items) apply the template's list numPr (numId=5, ilvl=0)
+   using a helper like:
+   ```python
+   def bullet(doc, t):
+       p = doc.add_paragraph(t, style='normal')
+       pPr = p._p.get_or_add_pPr()
+       numPr = OxmlElement('w:numPr')
+       ilvl = OxmlElement('w:ilvl'); ilvl.set(qn('w:val'), '0')
+       numId = OxmlElement('w:numId'); numId.set(qn('w:val'), '5')
+       numPr.append(ilvl); numPr.append(numId)
+       pPr.append(numPr)
+       return p
+   ```
+   Use `n()` (plain normal) only for name subtitle, email, date lines, section
+   summary paragraphs, and the footer note. Everything else uses `bullet()`.
+
+   Write a self-contained Python script and run it with the Bash tool. Confirm the
+   file was saved before reporting completion.
+
+10. **Convert to PDF.** Run:
+    ```
+    libreoffice --headless --convert-to pdf "TailoredResumes/<Company>-<RoleTitle>/Resume.docx" --outdir "TailoredResumes/<Company>-<RoleTitle>/"
+    ```
+    Confirm `Resume.pdf` was created.
+
+11. **Hand off.** Tell the user all three files are ready:
+    - `Resume.md` — reviewable draft with sourcing notes
+    - `Resume.docx` — styled source (edit this if changes are needed, then re-convert)
+    - `Resume.pdf` — final output
+    Note that LibreOffice's DOCX rendering can differ slightly from Word; advise a quick visual check.
 
 ## Hard rules
 

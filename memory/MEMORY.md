@@ -1,1 +1,2 @@
 - [John's professional positioning](user_professional_positioning.md) — five specializations (fintech/trading, blockchain, architecture, AI, leadership); don't lead with blockchain; AI agents should be explicit
+- [Hamza messaging stack correction](project_hamza_messaging_stack.md) — production used EventBridge + SQS, not RabbitMQ (earlier proposal); docs updated
