@@ -7,7 +7,7 @@
 **Role / Title:** Algorithmic Trading Engineer / Python Developer (exact title to be confirmed)
 **Dates:** 2023 (approx. 6 months)
 **Ownership:** Primary developer — built PyDAS API and algo trading system from scratch
-**Status:** Completed; strategies deployed and tested on live market
+**Status:** Completed; strategies deployed on live market and proven profitable in real trading
 **Primary Stack:** Python
 **Domain:** US equities, Nasdaq, NYSE, short-selling, borrowing, DAS Trader platform
 
@@ -15,7 +15,7 @@
 
 ## Canonical Summary
 
-Built algorithmic trading infrastructure for Leeds Rising in 2023, focused on short-selling strategies for US equities. Developed PyDAS — a robust, complete, and rigorously tested Python API wrapping the DAS trading platform — covering buying, selling, borrowing, and short-selling of US stocks. On top of PyDAS, built a full algorithmic trading system with a composable architecture: configurable Triggers and plug-and-playable Trade logic modules that allow dynamic trading strategy specification. Implemented borrowing and short-selling strategies targeting illiquid stocks on the Nasdaq and NYSE, and deployed and tested those strategies against the live market. Stack: Python, algorithmic trading, low-latency systems.
+Built algorithmic trading infrastructure for Leeds Rising in 2023, focused on short-selling strategies for US equities. Developed PyDAS — a robust, complete, and rigorously tested Python API wrapping the DAS trading platform — covering buying, selling, borrowing, and short-selling of US stocks. On top of PyDAS, built a full algorithmic trading system with a composable architecture: configurable Triggers and plug-and-playable Trade logic modules that allow dynamic trading strategy specification. Implemented borrowing and short-selling strategies targeting illiquid stocks on the Nasdaq and NYSE, and deployed those strategies against the live market with real capital — proven profitable in live trading. Stack: Python, algorithmic trading, low-latency systems.
 
 ---
 
@@ -141,7 +141,7 @@ Strategies were not just backtested — they were deployed and tested on the liv
 
 * Implemented algorithmic strategies for borrowing and short-selling illiquid US equities on Nasdaq and NYSE, handling the operational complexity of hard-to-borrow names and low-liquidity execution.
 
-* Deployed short-selling strategies to the live market and validated them against real execution conditions — fills, rejections, borrow availability, and latency — on Nasdaq and NYSE.
+* Deployed short-selling strategies to the live Nasdaq and NYSE markets with real capital — validated against real execution conditions and proven profitable in live trading.
 
 ---
 
@@ -231,7 +231,7 @@ Python, API development, SDK development, trading API, automated testing, compos
 ## Use With Care
 
 * "Low-latency" framing — stated as a domain/skill; ensure the Python implementation genuinely prioritized latency if pressed in interview (Python has latency limitations vs. C++/Rust for HFT)
-* Strategy performance — do not claim profitability or specific returns without confirmation
+* Strategy performance — confirmed profitable in live trading; do not claim specific return figures or percentages without confirmation
 
 ## Avoid Unless Confirmed
 
