@@ -25,9 +25,9 @@ Use this as a master-resume evidence-bank entry, not as a finished resume sectio
 **Primary Runtime Stack:** Rust, Tokio, Python, FastAPI, TypeScript, React 18, Vite, Tailwind CSS, TanStack Query, PostgreSQL, GCP, GCP Secret Manager, Jito, Helius, Helius LaserStream, Helius enhanced transaction API, WebSockets, Jupiter, Pump.fun / PumpPortal, Recharts, Matplotlib, Google OAuth 2.0, JWT  
 **Core Repositories / Subsystems:**
 
-- `homebot/trading_bot_backend` — production Rust trading engine
-- `homebot/trading_bot_ui` — React/TypeScript real-time command-and-control dashboard
-- `copytrade-bot-analysis` — full-stack research, analytics, and backtesting platform
+- `homebot/trading_bot_backend` - production Rust trading engine
+- `homebot/trading_bot_ui` - React/TypeScript real-time command-and-control dashboard
+- `copytrade-bot-analysis` - full-stack research, analytics, and backtesting platform
 
 ---
 
@@ -216,7 +216,7 @@ Wallet ranking / historical analysis / AI-assisted review
 
 ---
 
-## Production Backend — `homebot/trading_bot_backend`
+## Production Backend - `homebot/trading_bot_backend`
 
 `homebot/trading_bot_backend` is a high-performance, event-driven copy-trading engine built in Rust on Solana.
 
@@ -393,7 +393,7 @@ Potential future phrasing:
 
 ---
 
-## Frontend Command Dashboard — `homebot/trading_bot_ui`
+## Frontend Command Dashboard - `homebot/trading_bot_ui`
 
 `homebot/trading_bot_ui` is a React 18 + TypeScript dashboard that serves as the real-time command-and-control surface for the trading engine.
 
@@ -443,7 +443,7 @@ Potential future phrasing:
 
 ---
 
-## Research / Backtesting Platform — `copytrade-bot-analysis`
+## Research / Backtesting Platform - `copytrade-bot-analysis`
 
 `copytrade-bot-analysis` is a full-stack research and backtesting platform for evaluating Solana copy-trading strategies before committing real capital.
 
@@ -1330,12 +1330,12 @@ Remaining useful clarifications:
 
 ## Use With Care / Qualify Internally
 
-- “MEV protection” — safe if tied to Jito tip routing / priority submission rather than absolute protection.
-- “Sub-second latency” — safe as a detection characteristic, but avoid exact latency claims until metrics are available.
-- “11 DEXs” — safe from new source, but exact list still pending.
-- “Profitable” — safe qualitatively if already confirmed, but avoid exact ROI/P&L.
-- “HFT-style” — useful for resumes but better phrased as “low-latency” where precision matters.
-- “PumpPortal” vs “Pump.fun native bonding curve SDK” — verify exact implementation before final public resume use.
+- “MEV protection” - safe if tied to Jito tip routing / priority submission rather than absolute protection.
+- “Sub-second latency” - safe as a detection characteristic, but avoid exact latency claims until metrics are available.
+- “11 DEXs” - safe from new source, but exact list still pending.
+- “Profitable” - safe qualitatively if already confirmed, but avoid exact ROI/P&L.
+- “HFT-style” - useful for resumes but better phrased as “low-latency” where precision matters.
+- “PumpPortal” vs “Pump.fun native bonding curve SDK” - verify exact implementation before final public resume use.
 
 ## Avoid Unless Confirmed
 

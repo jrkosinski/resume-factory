@@ -220,12 +220,12 @@ Potential future phrasing:
 
 The smart-contract suite was architected around modular EVM contracts:
 
-- `Vault` — core investment lifecycle, deposit, phase, round, exchange-rate, and redemption logic
-- `VaultToken` — paired ERC-20-style position token representing investor claims
-- `SecurityManager` — standalone fine-grained RBAC contract using OpenZeppelin `AccessControl`
-- `Whitelist` — optional KYC/AML-gating contract for regulated deployments
-- `DepositVault` — sweep-in deposit UX using simple ERC-20 transfers and off-chain finalization
-- `CarefulMath` — precision-safe exchange-rate arithmetic and accounting helpers
+- `Vault` - core investment lifecycle, deposit, phase, round, exchange-rate, and redemption logic
+- `VaultToken` - paired ERC-20-style position token representing investor claims
+- `SecurityManager` - standalone fine-grained RBAC contract using OpenZeppelin `AccessControl`
+- `Whitelist` - optional KYC/AML-gating contract for regulated deployments
+- `DepositVault` - sweep-in deposit UX using simple ERC-20 transfers and off-chain finalization
+- `CarefulMath` - precision-safe exchange-rate arithmetic and accounting helpers
 
 The architecture supported:
 
@@ -928,7 +928,7 @@ Use the most precise version once the metric is clarified.
 
 # Published Resume Bullets (from OldResumes/)
 
-These exact bullets appeared in a published resume and are pre-vetted for external use. Prefer these phrasings when compiling future resumes — they are concise, metric-specific, and production-tested.
+These exact bullets appeared in a published resume and are pre-vetted for external use. Prefer these phrasings when compiling future resumes - they are concise, metric-specific, and production-tested.
 
 - Designed and implemented mission-critical on-chain financial primitives supporting bond rollover and compounding yield
 - Implemented system and security architecture for the back-office settlement system driving bond vault operations
@@ -1425,7 +1425,7 @@ random_walk_tests:
   withdrawal_paths:
     - withdraw
     - withdrawDirect
-  accounting_tolerance: '<50 wei drift'
+  accounting_tolerance: "<50 wei drift"
 echidna_invariants:
   - vault_cannot_leak_money
   - admin_cannot_be_lost

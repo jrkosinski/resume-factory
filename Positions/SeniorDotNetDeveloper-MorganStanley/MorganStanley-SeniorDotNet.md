@@ -26,20 +26,20 @@ Senior .NET developer at Morgan Stanley (2006–2009), delivering back-end logic
 
 ## Primary Tags
 
-* .NET
-* C#
-* Back-end development
-* Fixed income
-* Currency trading
-* Global Wealth Management
-* Mainframe integration
-* COBOL
-* Legacy systems
-* Test-driven development (TDD)
-* Automated testing
-* Financial services
-* Enterprise engineering
-* Morgan Stanley
+- .NET
+- C#
+- Back-end development
+- Fixed income
+- Currency trading
+- Global Wealth Management
+- Mainframe integration
+- COBOL
+- Legacy systems
+- Test-driven development (TDD)
+- Automated testing
+- Financial services
+- Enterprise engineering
+- Morgan Stanley
 
 ---
 
@@ -57,11 +57,11 @@ Served as a Senior .NET Developer embedded in a department responsible for back-
 
 Owned and contributed to:
 
-* Back-end logic for a new fixed-income product interface within the Global Wealth Management Platform
-* Development support for internal currency trading operations
-* .NET integration modules interfacing with legacy COBOL mainframe systems
-* Test-driven development policy design and rollout across the department
-* Automated test implementation for multiple projects
+- Back-end logic for a new fixed-income product interface within the Global Wealth Management Platform
+- Development support for internal currency trading operations
+- .NET integration modules interfacing with legacy COBOL mainframe systems
+- Test-driven development policy design and rollout across the department
+- Automated test implementation for multiple projects
 
 ---
 
@@ -73,7 +73,7 @@ Developed back-end logic for a new fixed-income product interface in Morgan Stan
 
 ### Currency Trading Support
 
-Supported development for internal currency trading operations — systems used within Morgan Stanley's own operational and trading workflows rather than client-facing products.
+Supported development for internal currency trading operations - systems used within Morgan Stanley's own operational and trading workflows rather than client-facing products.
 
 ### Legacy Mainframe Integration
 
@@ -81,7 +81,7 @@ Designed and integrated .NET modules to interface with legacy mainframe systems 
 
 ### Test-Driven Development
 
-Pioneered test-driven development (TDD) policies within the department. This was not just personal practice — it involved advocating for, designing, and implementing rigorous automated testing standards that were adopted across multiple projects in the department. This is an early and notable example of engineering culture leadership alongside individual technical delivery.
+Pioneered test-driven development (TDD) policies within the department. This was not just personal practice - it involved advocating for, designing, and implementing rigorous automated testing standards that were adopted across multiple projects in the department. This is an early and notable example of engineering culture leadership alongside individual technical delivery.
 
 ---
 
@@ -89,47 +89,47 @@ Pioneered test-driven development (TDD) policies within the department. This was
 
 ## Strong General Bullets
 
-* Developed back-end logic for a new fixed-income product interface within Morgan Stanley's Global Wealth Management Platform, a large-scale, regulated financial services system.
+- Developed back-end logic for a new fixed-income product interface within Morgan Stanley's Global Wealth Management Platform, a large-scale, regulated financial services system.
 
-* Supported internal currency trading operations by contributing to the development of back-end systems used within Morgan Stanley's own trading workflows.
+- Supported internal currency trading operations by contributing to the development of back-end systems used within Morgan Stanley's own trading workflows.
 
-* Designed and integrated .NET modules that bridged modern application code with legacy COBOL mainframe systems, enabling reliable communication across a heterogeneous technology stack.
+- Designed and integrated .NET modules that bridged modern application code with legacy COBOL mainframe systems, enabling reliable communication across a heterogeneous technology stack.
 
-* Pioneered test-driven development (TDD) practices in the department, implementing automated testing standards across multiple projects and establishing a culture of test-first engineering.
+- Pioneered test-driven development (TDD) practices in the department, implementing automated testing standards across multiple projects and establishing a culture of test-first engineering.
 
 ---
 
 ## Back-End / .NET Bullets
 
-* Built C#/.NET back-end services for fixed-income product interfaces in a high-stakes financial platform with strict correctness and compliance requirements.
+- Built C#/.NET back-end services for fixed-income product interfaces in a high-stakes financial platform with strict correctness and compliance requirements.
 
-* Designed .NET integration modules to interface with COBOL-based legacy mainframe systems, handling data translation, protocol compatibility, and operational reliability.
+- Designed .NET integration modules to interface with COBOL-based legacy mainframe systems, handling data translation, protocol compatibility, and operational reliability.
 
-* Contributed to internal currency trading back-end development, supporting Morgan Stanley's operational trading workflows.
+- Contributed to internal currency trading back-end development, supporting Morgan Stanley's operational trading workflows.
 
 ---
 
 ## Legacy Integration Bullets
 
-* Bridged .NET application layers with COBOL mainframe systems at Morgan Stanley, designing integration modules that maintained reliability and data integrity across a heterogeneous stack.
+- Bridged .NET application layers with COBOL mainframe systems at Morgan Stanley, designing integration modules that maintained reliability and data integrity across a heterogeneous stack.
 
-* Applied mainframe integration patterns to modernize data flows between legacy infrastructure and new .NET product interfaces without requiring full mainframe replacement.
+- Applied mainframe integration patterns to modernize data flows between legacy infrastructure and new .NET product interfaces without requiring full mainframe replacement.
 
 ---
 
 ## Testing / TDD Bullets
 
-* Pioneered test-driven development (TDD) policy across the department at Morgan Stanley, advocating for automated testing rigor and implementing test suites across multiple projects.
+- Pioneered test-driven development (TDD) policy across the department at Morgan Stanley, advocating for automated testing rigor and implementing test suites across multiple projects.
 
-* Established automated testing standards that raised engineering quality baselines across a department-level software team in a major financial institution.
+- Established automated testing standards that raised engineering quality baselines across a department-level software team in a major financial institution.
 
 ---
 
 ## Finance Domain Bullets
 
-* Delivered back-end systems for fixed-income product interfaces and currency trading operations within Morgan Stanley's Global Wealth Management infrastructure.
+- Delivered back-end systems for fixed-income product interfaces and currency trading operations within Morgan Stanley's Global Wealth Management infrastructure.
 
-* Worked within a large, regulated financial services environment requiring reliable, maintainable code for mission-critical wealth management systems.
+- Worked within a large, regulated financial services environment requiring reliable, maintainable code for mission-critical wealth management systems.
 
 ---
 
@@ -139,11 +139,11 @@ Pioneered test-driven development (TDD) policies within the department. This was
 
 Emphasize:
 
-* .NET / C# back-end development at scale
-* Large enterprise financial platform
-* Fixed income and trading domain
-* Legacy mainframe integration (.NET ↔ COBOL)
-* Test-driven development
+- .NET / C# back-end development at scale
+- Large enterprise financial platform
+- Fixed income and trading domain
+- Legacy mainframe integration (.NET ↔ COBOL)
+- Test-driven development
 
 This is strong evidence of enterprise-grade engineering rigor in a high-stakes financial environment.
 
@@ -153,11 +153,11 @@ This is strong evidence of enterprise-grade engineering rigor in a high-stakes f
 
 Emphasize:
 
-* Morgan Stanley brand / Global Wealth Management
-* Fixed income product development
-* Currency trading operations
-* Regulated financial services environment
-* Correctness, reliability, and testing standards
+- Morgan Stanley brand / Global Wealth Management
+- Fixed income product development
+- Currency trading operations
+- Regulated financial services environment
+- Correctness, reliability, and testing standards
 
 Useful for demonstrating finance domain familiarity and credibility with established institutions.
 
@@ -167,9 +167,9 @@ Useful for demonstrating finance domain familiarity and credibility with establi
 
 Emphasize:
 
-* Pioneered TDD policy at the department level
-* Advocated for and implemented automated testing standards
-* Cross-project impact beyond individual feature delivery
+- Pioneered TDD policy at the department level
+- Advocated for and implemented automated testing standards
+- Cross-project impact beyond individual feature delivery
 
 This is an early example of engineering culture leadership, not just individual contribution.
 
@@ -179,9 +179,9 @@ This is an early example of engineering culture leadership, not just individual 
 
 Emphasize:
 
-* .NET-to-COBOL mainframe integration
-* Heterogeneous stack bridging
-* Legacy system interfacing without replacement
+- .NET-to-COBOL mainframe integration
+- Heterogeneous stack bridging
+- Legacy system interfacing without replacement
 
 Strong signal for roles involving integration work, brownfield systems, or enterprise modernization.
 
@@ -207,24 +207,24 @@ Test-driven development, TDD, automated testing, software quality, engineering s
 
 ## Safe to Claim
 
-* Senior .NET Developer role at Morgan Stanley, 2006–2009
-* Developed back-end logic for a fixed-income product interface in the Global Wealth Management Platform
-* Supported internal currency trading operations
-* Designed .NET integration modules interfacing with COBOL-based mainframe systems
-* Pioneered TDD policies and automated testing across the department
+- Senior .NET Developer role at Morgan Stanley, 2006–2009
+- Developed back-end logic for a fixed-income product interface in the Global Wealth Management Platform
+- Supported internal currency trading operations
+- Designed .NET integration modules interfacing with COBOL-based mainframe systems
+- Pioneered TDD policies and automated testing across the department
 
 ## Use With Care
 
-* Any specific metrics (team size, number of projects, performance figures) — not provided; do not invent
-* Specific fixed-income product name or product details beyond "fixed-income product interface" — not specified
-* "Architected" or "led" framing unless corroborated — current evidence supports "designed and integrated" and "pioneered," not formal tech lead title
+- Any specific metrics (team size, number of projects, performance figures) - not provided; do not invent
+- Specific fixed-income product name or product details beyond "fixed-income product interface" - not specified
+- "Architected" or "led" framing unless corroborated - current evidence supports "designed and integrated" and "pioneered," not formal tech lead title
 
 ## Avoid Unless Confirmed
 
-* Specific trading volumes, revenue figures, or business impact numbers
-* Specific COBOL mainframe systems or vendor platforms
-* Any claim about the number of engineers in the department
-* Any claim about managerial or formal leadership authority
+- Specific trading volumes, revenue figures, or business impact numbers
+- Specific COBOL mainframe systems or vendor platforms
+- Any claim about the number of engineers in the department
+- Any claim about managerial or formal leadership authority
 
 ---
 
