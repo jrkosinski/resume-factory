@@ -137,7 +137,21 @@ letter to polish"), after the cover letter is finalized:
 - Write it to `CoverLetter_<Language>.md` / `.docx` / `.pdf` in the same folder.
 - Use native script and spelling conventions for the target language.
 
-### 7. Progress reporting
+### 7. Archive processed folder
+
+After all deliverables for a job folder are confirmed on disk, move the entire
+`inputs/<folder>/` directory to `processed-inputs/<folder>/`. Create
+`processed-inputs/` if it does not already exist. Use `mv`, not `cp`:
+
+```
+mv inputs/<folder> processed-inputs/<folder>
+```
+
+Only move after all files (`.md`, `.docx`, `.pdf`) are verified to exist in
+`TailoredResumes/`. If any deliverable is missing, leave the folder in `inputs/`
+and warn the user.
+
+### 8. Progress reporting
 
 After finishing each job folder, print a one-line status:
 ```
