@@ -1,7 +1,8 @@
 # resume-factory
 
 Personal archive and compiler system for tailoring John R. Kosinski's resume to
-specific job applications. Not a code project - no source, no build, no tests.
+specific job applications. Mostly content, not code; the only code is in
+`scripts/` (see `scripts/README.md`).
 
 ## Structure
 
@@ -25,6 +26,13 @@ specific job applications. Not a code project - no source, no build, no tests.
   `TailoredResumes/Canonical/John_R_Kosinski_Canonical.md` is the master
   resume covering all positions; job-specific drafts live under
   `TailoredResumes/<Company>-<RoleTitle>/`.
+- `scripts/tools/render_resume.py` - renders a draft folder's `Resume*.md` /
+  `CoverLetter*.md` into DOCX and PDF with the format guide's styles; refuses
+  em-dashes.
+- `scripts/mcp/resume_server.py` - the repo as the `resume-factory` MCP server,
+  registered at user scope so agents in any repo can look up positions, tailor
+  and revise resumes. Runs from `.venv/` (MCP SDK 2.x). Its agent tools run
+  Claude Code here, able to write only under `TailoredResumes/`.
 
 ## Evidence-bank file format
 

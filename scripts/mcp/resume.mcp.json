@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "resume-factory": {
+      "command": "/home/blanta/NOWY/projects/resume-factory/.venv/bin/python",
+      "args": ["/home/blanta/NOWY/projects/resume-factory/scripts/mcp/resume_server.py"]
+    }
+  }
+}
