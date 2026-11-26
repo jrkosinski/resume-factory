@@ -1,0 +1,54 @@
+Staff Engineer - Solana
+
+About the job
+At R3, we are building the on-ramp for the next trillion dollars of assets to move on-chain, bridging the worlds of traditional finance (TradFi) and decentralized finance (DeFi). We are launching institutional-grade RWA yield vaults, fully composable and integrated into Solana DeFi.
+
+Our Corda Protocol is an institutional tokenized Real World Asset platform built on Solana. KYC'd investors deposit stablecoins into RWA vaults in exchange for vault tokens, and redeem the oracle-priced vault tokens back into stablecoins, with curators buying and selling the corresponding assets out in the Real World to settle those on-chain token transactions.
+
+The Role
+
+We're looking for a Senior Full Stack Engineer to build and ship production RWA trading and lending infrastructure on Solana. You'll work across the stack, from on-chain programs to the front ends investors, traders and integrators use. You'll be working on systems that move real capital: liquidity venues, lending markets, and market-making infrastructure. This is a hands-on role for someone who has a genuine interest in bringing regulated finance on-chain and has already shipped DeFi protocols on Solana and understands the operational realities of running them under load.
+
+As an early team member, you will play a crucial role in shaping the Corda Protocol. You should care as much about security, compliance, and auditability as you do about shipping quickly.
+
+Responsibilities
+
+• Influence the design and development of the Corda Protocol RWA yield marketplace to scale it to multichain & multi-curator future
+
+• Design and build Solana programs (Rust/Anchor) for vaults, order books, AMMs, lending markets, or related liquidity infrastructure.
+
+• Build the full stack around these programs: indexers, keepers/crankers, APIs, and the React/TypeScript front ends that expose them to users and integrators.
+
+• Work directly on market-making and liquidity systems and the plumbing that keeps venues liquid and solvent.
+
+• Participate in code review, threat modelling, and internal/external audits of new and existing programs.
+
+• Design, implement, and optimize SDKs that will power our integration with centralized partners (exchanges, wallets, neobanks).
+
+Required Skills/Experience
+
+• Prior experience at a crypto-native or web3 engineering team is a must; you will have worked at a lending protocol, yield marketplace, vaults infra or any similar marketplace that connected onchain allocators to the curated vaults.
+
+• Minimum of 6 years in software development and 3 years of experience in Rust with meaningful production time on Solana.
+
+• Proven experience shipping and deploying Solana programs in Rust (Anchor or native), ideally in one or more of: order book or AMM-style liquidity venues, lending/borrowing protocols, or market-making systems.
+
+• Full stack range: comfortable owning on-chain program logic and the off-chain services and front end (TypeScript/React, Node) that surround it.
+
+• Solid understanding of Solana's account model, PDAs, CPI, transaction/compute limits, and the tradeoffs involved in high-throughput on-chain systems.
+
+Nice to Haves
+
+• Experience owning architecture & delivery.
+
+• MPC wallets/custody, Squads, on-chain monitoring, AML screening.
+
+• Familiarity with Kubernetes concepts & Kubernetes networking, Terraform, PostgreSQL.
+
+• PKI and other cryptographic knowledge.
+
+• Experience supporting systems in production and investigating & diagnosing issues for internal or external customers.
+
+• Experience of Linux, shell scripting or other scripting languages, Linux command line tools, TCP/IP networking.
+
+• Java / Kotlin.

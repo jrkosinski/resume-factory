@@ -1,0 +1,22 @@
+- Zeppelin
+    # Hackathon award
+    - smart contract diagram
+    - UI?
+    - smart contracts?
+- Stream Finance 
+    - more pics of smth
+    # description/bullets
+    # smart contracts
+        - list
+        # https://etherscan.io/address/0xd86FFB404147163e19E010a0e9d4995E0e36F335#code
+# Hamza Payments 
+    - smart contracts
+# FreshDirect 
+- Budgie
+    - UI shots
+    # architecture shots
+    # description/bullets
+- Predmark
+    # description
+    - UI shots
+    - architecture shots

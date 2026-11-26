@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      @page {
+        size: letter;
+        margin: 0.75in 1in 0.8in 1in;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+        font-size: 10.2pt;
+        line-height: 1.52;
+        color: #333333;
+        background: #ffffff;
+      }
+
+      a {
+        color: #1155cc;
+        text-decoration: underline;
+      }
+
+      strong {
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+
+      /* ── HEADER BLOCK ── */
+      .resume-name {
+        font-size: 29pt;
+        font-weight: 900;
+        color: #1a1a1a;
+        line-height: 1.05;
+        margin-bottom: 5pt;
+        letter-spacing: -0.5pt;
+      }
+
+      .resume-subtitle {
+        font-size: 11.5pt;
+        font-weight: 400;
+        color: #666666;
+        margin-bottom: 4pt;
+        letter-spacing: 0.1pt;
+      }
+
+      .resume-email {
+        font-size: 10pt;
+        color: #1155cc;
+        display: block;
+        margin-bottom: 14pt;
+        text-decoration: underline;
+      }
+
+      /* ── HORIZONTAL RULES ── */
+      hr {
+        border: none;
+        border-top: 1px solid #cccccc;
+      }
+
+      .hr-section-sep {
+        margin: 13pt 0 13pt 0;
+      }
+
+      .hr-title-under {
+        margin: 0 0 10pt 0;
+      }
+
+      .hr-entry-sep {
+        margin: 11pt 0;
+      }
+
+      /* ── SECTION TITLES ── */
+      .section-title {
+        font-size: 13pt;
+        font-weight: 900;
+        color: #1a1a1a;
+        text-transform: uppercase;
+        letter-spacing: 0.4pt;
+        margin-bottom: 7pt;
+      }
+
+      /* ── BODY TEXT ── */
+      p.body-text {
+        font-size: 10.2pt;
+        color: #333333;
+        line-height: 1.52;
+        margin-bottom: 7pt;
+      }
+
+      p.body-text:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── BULLET LISTS ── */
+      ul.resume-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      ul.resume-list li {
+        position: relative;
+        padding-left: 14pt;
+        margin-bottom: 4pt;
+        font-size: 10.2pt;
+        line-height: 1.5;
+        color: #333333;
+      }
+
+      ul.resume-list li:last-child {
+        margin-bottom: 0;
+      }
+
+      ul.resume-list li::before {
+        content: "●";
+        position: absolute;
+        left: 0;
+        top: 1pt;
+        font-size: 6pt;
+        color: #555555;
+        line-height: 2;
+      }
+
+      /* ── EXPERIENCE ENTRIES ── */
+      .entry-block {
+        page-break-inside: avoid;
+      }
+
+      .entry-header {
+        font-size: 11pt;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 1pt;
+      }
+
+      .entry-meta {
+        font-size: 9pt;
+        color: #777777;
+        font-style: italic;
+        margin-bottom: 6pt;
+      }
+
+      /* ── ADDITIONAL EXPERIENCE NOTE ── */
+      .compressed-note {
+        font-size: 9.5pt;
+        color: #666666;
+        font-style: italic;
+        margin-top: 6pt;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════ HEADER ═══════════════════════════════════ -->
+    <div class="resume-name">JOHN R. KOSINSKI</div>
+    <div class="resume-subtitle">
+      Senior Systems Architect &bull; Principal Engineer &bull; Operator
+    </div>
+    <a class="resume-email" href="mailto:john.kosinski@toptal.com"
+      >john.kosinski@toptal.com</a
+    >
+
+    <hr class="hr-section-sep" style="margin-top: 0" />
+
+    <!-- ═══════════════════════════════════ SUMMARY ══════════════════════════════════ -->
+    <div class="section-title">Summary</div>
+    <hr class="hr-title-under" />
+    <p class="body-text">
+      Senior technologist and system owner with over fifteen years of experience
+      building production systems across blockchain, decentralized finance,
+      automated trading, fintech infrastructure, and enterprise software. Known
+      for owning complex technical problems end-to-end &mdash; from concept
+      through architecture, implementation, and production operations &mdash; in
+      environments where failure carries real financial, operational, or
+      reputational consequences. Currently active across live real-money trading
+      systems, Web3 infrastructure, AI-assisted engineering, and technical
+      discovery engagements via Toptal.
+    </p>
+    <p class="body-text">
+      Primary strengths include system ownership under risk, constraint-driven
+      architecture, technical decision authority in ambiguous environments, and
+      the ability to translate complex domain requirements into production-grade
+      systems with minimal support structure.
+    </p>
+
+    <hr class="hr-section-sep" />
+
+    <!-- ══════════════════════════════ CORE CAPABILITIES ═════════════════════════════ -->
+    <div class="section-title">Core Capabilities</div>
+    <hr class="hr-title-under" />
+    <ul class="resume-list">
+      <li>System ownership under financial and operational risk</li>
+      <li>
+        Constraint-driven architecture (security, capital, latency,
+        irreversibility)
+      </li>
+      <li>
+        Blockchain &amp; DeFi system design (EVM, Solana, Sui, cross-chain,
+        tokenomics)
+      </li>
+      <li>
+        Smart contract architecture, security, and multi-layer testing
+        (Solidity, Sui Move, Echidna, Foundry)
+      </li>
+      <li>
+        Distributed systems, event-driven architecture, and data pipelines
+        (Kafka, Kubernetes, cloud infrastructure)
+      </li>
+      <li>Financial &amp; risk modeling</li>
+      <li>
+        Automated trading system design and ownership (crypto arbitrage,
+        prediction markets, copy-trading)
+      </li>
+      <li>
+        LLM orchestration and AI-assisted systems combined with deterministic
+        code
+      </li>
+      <li>Technical discovery, C4 architecture, and pre-build scoping</li>
+      <li>
+        Team leadership, CTO-level technical strategy, and startup co-founding
+      </li>
+      <li>Clear technical decision-making under uncertainty</li>
+    </ul>
+
+    <hr class="hr-section-sep" />
+
+    <!-- ══════════════════════════ SYSTEMS OWNED / SELECTED EXPERIENCE ═══════════════ -->
+    <div class="section-title">Systems Owned / Selected Experience</div>
+    <hr class="hr-title-under" />
+
+    <!-- BUDGIE -->
+    <div class="entry-block">
+      <div class="entry-header">
+        Budgie &mdash; Technical Software Architect (Toptal Discovery
+        Engagement)
+      </div>
+      <div class="entry-meta">
+        Apr &ndash; May 2026 &nbsp;&middot;&nbsp; Singapore AI Personal Finance
+        Startup &nbsp;&middot;&nbsp; 3-week formal discovery
+      </div>
+      <ul class="resume-list">
+        <li>
+          Served as the technical architecture lead on a formal 3-week Toptal
+          discovery engagement for Budgie, a Singapore AI personal finance
+          startup; sole technical member of a
+          <strong>3-person discovery team</strong> (architect, product manager,
+          UI/UX designer), producing
+          <strong>six C4-level architecture diagrams</strong> covering system
+          context, container decomposition, financial core components, AI
+          service layers, and a cross-cutting notifications pipeline.
+        </li>
+        <li>
+          Designed a
+          <strong>layered LLM orchestration architecture</strong> &mdash;
+          Personality, Policy/Guardrails, Tools, Context &amp; History,
+          Explainability, PII Detection, LLM Abstraction, and Token Usage
+          Tracking layers &mdash; where deterministic calculation tools replace
+          inline LLM arithmetic to prevent hallucination in financial outputs;
+          recommended Anthropic Claude as the LLM provider and scoped RAG
+          grounding with curated source citations for financial knowledge
+          queries.
+        </li>
+        <li>
+          Designed the Financial Data Aggregation Hub with canonical model
+          mapping, cross-source account consolidation, and a derived metrics
+          layer feeding a Financial Health Score service, transaction
+          categorization engine (rule-based plus AI-assisted, with Asian-market
+          localization flag), goals/budgeting engine, and proactive insights
+          engine; assessed Finverse (bank aggregation, SG/HK), Goldrush API
+          (multi-chain blockchain wallet data), and CoinGecko (crypto pricing)
+          for the integration stack.
+        </li>
+        <li>
+          Contributed technical scoping to a
+          <strong>421-feature product backlog across 16 epics</strong> (Private
+          Beta through v2+), identified Finverse&rsquo;s 2FA-per-refresh
+          constraint as the primary engagement-model risk before build
+          commitment, and flagged MAS and PDPA regulatory constraints shaping AI
+          guardrail design and LLM data retention requirements.
+        </li>
+        <li>
+          Designed a consent-first notifications pipeline with intake API,
+          preference/consent check, deduplication, throttling, content building,
+          and multi-channel routing (push via Expo/OneSignal, email) feeding
+          proactive AI coaching cadences.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="hr-entry-sep" />
+
+    <!-- PREDICTION MARKETS -->
+    <div class="entry-block">
+      <div class="entry-header">
+        Prediction Markets Trading Engine &mdash; AI/Trading Systems Engineer
+      </div>
+      <div class="entry-meta">
+        Jan 2026 &ndash; Present &nbsp;&middot;&nbsp; Private Trader Client
+        &nbsp;&middot;&nbsp; Kalshi, Polymarket
+      </div>
+      <ul class="resume-list">
+        <li>
+          Sole architect and developer of a
+          <strong>live, real-money prediction-markets trading platform</strong>
+          for a private trader client supporting Kalshi and Polymarket
+          execution, currently in production at small but increasing
+          profitability; owns full client relationship, architecture, strategy
+          framework, data engineering, AI integration, frontend, and production
+          operations.
+        </li>
+        <li>
+          Designed a
+          <strong>modular TypeScript strategy framework</strong> where each
+          strategy is implemented as a class behind a shared interface, enabling
+          consistent backtesting, parameter optimization, side-by-side
+          comparison, and live execution across strategy families including
+          Avellaneda-Stoikov market making, OFI market making, and a modified
+          Dutch Arbitrage spread-capture model for ranging markets.
+        </li>
+        <li>
+          Built a configurable backtesting engine with train/test split support,
+          <strong>Bayesian parameter optimization via Python/Optuna</strong>,
+          and comprehensive metrics including Calmar ratio, Profit Factor,
+          P&amp;L, max drawdown, inventory risk, ROI, expectancy, Sharpe ratio,
+          and win rate; modeled fees, slippage, and latency to improve strategy
+          evaluation reliability before live deployment.
+        </li>
+        <li>
+          Embedded lightweight LLM-wrapper agents (tool-use, structured-output,
+          and workflow-based) for strategy-code generation, backtest
+          interpretation, parameter-tuning suggestions, and diagnostic analysis;
+          AI outputs optionally saved with backtest sessions for audit; agents
+          prevented from accessing sensitive data.
+        </li>
+        <li>
+          Built market-data ingestion workflows from Kalshi, Polymarket, and
+          ESPN APIs into Google Bigtable for historical storage and PostgreSQL
+          for backtesting; built a TypeScript/Vite/Tailwind frontend exposing
+          backtests, optimization runs, live session data, strategy parameter
+          sets, dashboards, AI-assisted strategy generation, and live trading
+          controls.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="hr-entry-sep" />
+
+    <!-- HAMZA -->
+    <div class="entry-block">
+      <div class="entry-header">Hamza &mdash; CTO &amp; Co-Founder</div>
+      <div class="entry-meta">
+        Jan 2024 &ndash; Jan 2026 &nbsp;&middot;&nbsp; Decentralized E-Commerce
+        &nbsp;&middot;&nbsp; Six-developer team &nbsp;&middot;&nbsp; Live
+        production
+      </div>
+      <ul class="resume-list">
+        <li>
+          Served as CTO and co-founder of Hamza, a live decentralized e-commerce
+          platform with
+          <strong
+            >hundreds of monthly users, 20+ sellers, thousands of SKUs, and
+            ~$5k&ndash;$10k USD monthly throughput</strong
+          >; led a six-developer engineering team across frontend, backend,
+          seller admin, cross-chain payment infrastructure, Solidity smart
+          contracts, tokenomics, AWS/Kubernetes infrastructure, CI/CD, and
+          production operations.
+        </li>
+        <li>
+          Architected a production
+          <strong>cross-chain crypto payment system</strong> using payment
+          intents, per-payment one-time holding wallets (HD wallet / BIP32/BIP39
+          address derivation), chain listeners, EventBridge/SQS event
+          processing, idempotent verification, immediate Optimism canonical
+          escrow settlement, merchant webhooks, and LiFi-based batch settlement
+          replenishment &mdash; supporting Optimism, Arbitrum, Bitcoin, Ethereum
+          mainnet, Polygon, Mantle, Scroll, and other EVM L2s; Solana payment
+          support was built but not deployed.
+        </li>
+        <li>
+          Architected Solidity escrow contracts (<code>PaymentEscrow</code>,
+          <code>EscrowMulticall</code>, <code>SystemSettings</code>) deployed to
+          Optimism, implementing
+          <strong
+            >consent-based buyer/seller release/refund state machines</strong
+          >, Hats Protocol role models, protocol fees, seller-delegated admin
+          permissions, and a multi-service NestJS payment backend
+          (address-store, payment-processor, payment-admin-api) coordinated
+          through a shared pnpm monorepo; tested with Foundry, Hardhat, and
+          Echidna.
+        </li>
+        <li>
+          Led development of the flagship multitenant decentralized marketplace
+          using MedusaJS, NestJS, Next.js, TypeScript, PostgreSQL, Redis,
+          EventBridge/SQS, AWS EC2/RDS/S3, and Kubernetes, supporting inventory,
+          product filtering, cart, wishlist, user management, notifications,
+          seller administration, wallet-based checkout, and NFT-based on-chain
+          seller identity.
+        </li>
+        <li>
+          Co-designed utility token tokenomics &mdash; seller escrow rent,
+          initial seller mint, dispute-resolution incentives, vault contracts,
+          and governance wrappers &mdash; and established production engineering
+          practices including CI/CD, backend tests, payment-system tests,
+          smart-contract tests, dev/staging/testing environments, monitoring,
+          and alerting across the full stack.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="hr-entry-sep" />
+
+    <!-- PFP CAPITAL -->
+    <div class="entry-block">
+      <div class="entry-header">
+        PFP Capital &mdash; Solana Copy-Trading Systems Architect
+      </div>
+      <div class="entry-meta">
+        Dec 2025 &ndash; Present &nbsp;&middot;&nbsp; Semi-Private Client
+        &nbsp;&middot;&nbsp; Live real-money trading
+      </div>
+      <ul class="resume-list">
+        <li>
+          Sole architect and developer of a
+          <strong>live, real-money Solana copy-trading system</strong> for PFP
+          Capital; owns full client relationship, architecture, data design,
+          implementation, testing, diagnostics, deployment, and production
+          operations for a latency-sensitive trading system currently operating
+          profitably at small but increasing scale.
+        </li>
+        <li>
+          Built the production Rust/Tokio execution engine: subscribes to
+          real-time Solana log streams via
+          <strong>Helius LaserStream WebSockets</strong>, detects
+          monitored-wallet swaps with <strong>sub-second latency</strong> using
+          shared <code>Arc</code>-wrapped async application state, routes copy
+          trades through Pump.fun bonding-curve execution for pre-graduation
+          tokens or Jupiter DEX aggregator for broader liquidity, and monitors
+          multiple open positions concurrently.
+        </li>
+        <li>
+          Implemented
+          <strong
+            >Jito tip routing and Helius priority transaction
+            broadcasting</strong
+          >
+          for MEV-aware execution; built risk controls including supply-aware
+          position sizing, trailing stop-loss with peak P&amp;L tracking,
+          configurable risk tiers, max slippage, liquidity-based price-impact
+          limits, wallet/token filters, and max holding-time guards; integrated
+          GCP Secret Manager for private key management.
+        </li>
+        <li>
+          Built a Python/FastAPI research and backtesting platform that
+          reconstructs Solana wallet trade histories from Helius enhanced
+          transaction data, parses swaps across 11 DEXs, computes
+          <strong
+            >FIFO P&amp;L, Sharpe ratio, max drawdown, win rate, and cumulative
+            returns</strong
+          >, and backtests copy strategies with pluggable
+          <code>ITradingStrategy</code> hooks, configurable latency assumptions,
+          and copy-latency measurement using slot/time deltas.
+        </li>
+        <li>
+          Built a React 18/TypeScript operator dashboard with Vite, Tailwind,
+          TanStack Query, persistent WebSockets with exponential-backoff
+          reconnect, Google OAuth 2.0/JWT-gated access, live positions, P&amp;L
+          multipliers, color-coded log stream, background task heartbeats,
+          graceful shutdown, force-sell, and wallet-list management.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="hr-entry-sep" />
+
+    <!-- STREAM FINANCE -->
+    <div class="entry-block">
+      <div class="entry-header">
+        Stream Finance &mdash; Principal Architect &amp; Founding Engineer
+      </div>
+      <div class="entry-meta">
+        2022 &ndash; 2023 &nbsp;&middot;&nbsp; EVM Bond Vault / Tokenized US
+        Treasury Investment System
+      </div>
+      <ul class="resume-list">
+        <li>
+          Served as principal architect and founding engineer for Stream
+          Finance, designing and building the smart-contract and cloud
+          operations infrastructure for an
+          <strong
+            >EVM-based investment protocol backed by short-term US Treasury
+            bonds</strong
+          >
+          and other fixed-income instruments; the system later became the
+          technical foundation for XUSD, a same-company stablecoin product.
+        </li>
+        <li>
+          Architected a modular Solidity contract suite &mdash;
+          <code>Vault</code>, <code>VaultToken</code>,
+          <code>SecurityManager</code>, optional <code>Whitelist</code>,
+          <code>DepositVault</code>, and precision-safe exchange-rate math
+          &mdash; supporting stablecoin deposits, Vault Token issuance,
+          <strong
+            >Deposit/Locked/Withdraw phases, sequential investment rounds,
+            rollover-based compounding</strong
+          >, admin-controlled exchange-rate updates, and stablecoin redemption;
+          deployed to Ethereum testnet and mainnet.
+        </li>
+        <li>
+          Built a
+          <strong>multi-layer smart-contract testing strategy</strong> using
+          Hardhat/Chai/Ethers.js, randomized multi-user round simulations (5
+          epochs &times; 10 users &times; 12 rounds, accounting tolerance under
+          50 wei), and <strong>Echidna invariant campaigns</strong> covering
+          value conservation, admin-role survivability, role-safety boundaries,
+          whitelist enforcement, proxy upgrade authorization, and storage-slot
+          immutability; performed manual penetration testing and internal
+          security review.
+        </li>
+        <li>
+          Architected AWS-backed operational infrastructure:
+          deposit-finalization pipeline (ECS Fargate listener &rarr; SQS &rarr;
+          Lambda, idempotent with RDS transaction check), lifecycle-management
+          workflow (EventBridge &rarr; Step Functions &rarr;
+          <strong>human approval gate</strong> &rarr; Lambda, phase/rate
+          transitions require human sign-off), exchange-rate oracle and drift
+          monitoring, and production invariant monitoring with immutable
+          S3/Kinesis audit logs and CloudWatch/SNS alerting.
+        </li>
+        <li>
+          Designed a shared SecurityManager access-control layer over
+          OpenZeppelin RBAC with fine-grained roles for lifecycle management,
+          deposits, pausing, minting, burning, and upgrades; kept privileged
+          rate/yield authority restricted to secure administrative contract
+          calls rather than ordinary dashboard controls; managed delivery of
+          frontend/admin dashboard.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="hr-entry-sep" />
+
+    <!-- QUANTGENIE -->
+    <div class="entry-block">
+      <div class="entry-header">
+        QuantGenie &mdash; Founder &amp; Principal Architect
+      </div>
+      <div class="entry-meta">
+        ~2023 &ndash; 2024 &nbsp;&middot;&nbsp; Natural Language &rarr; Compiled
+        Trading System
+      </div>
+      <ul class="resume-list">
+        <li>
+          Conceived, validated, and built the technical foundation for
+          QuantGenie, a
+          <strong
+            >natural-language &rarr; DSL &rarr; compiled trading system</strong
+          >
+          targeting retail traders; served as sole technical owner responsible
+          for feasibility analysis, system architecture, and proof-of-concept
+          execution from scratch.
+        </li>
+        <li>
+          Designed a constrained LLM generation pipeline integrated with
+          deterministic compilation and execution, separating AI-generated
+          strategy descriptions from compiled, auditable trading logic to
+          prevent hallucination in generated trading behavior.
+        </li>
+        <li>
+          Architected the backtesting data ingestion and processing pipeline,
+          including data normalization, storage strategy, and execution flow;
+          established technical foundations, process architecture, and early
+          team structure.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="hr-entry-sep" />
+
+    <!-- SOUNDBEATS -->
+    <div class="entry-block">
+      <div class="entry-header">Soundbeats &mdash; Blockchain Engineer</div>
+      <div class="entry-meta">
+        ~2023 &nbsp;&middot;&nbsp; Sui GameFi / Music Gaming Prototype
+      </div>
+      <ul class="resume-list">
+        <li>
+          Served as sole blockchain engineer for Soundbeats, a Sui-based GameFi
+          prototype using tokenized in-game points and NFT-based
+          characters/avatars to gamify a Beat Saber-like music experience;
+          worked cross-functionally with designers, game developers, and
+          marketing stakeholders on an early-stage prototype that received
+          outside attention and investment.
+        </li>
+        <li>
+          Built <strong>Sui Move smart contracts</strong> for fungible in-game
+          points and NFT-based game assets using Sui-native object ownership and
+          minting patterns, including built-in on-chain tests and best-practice
+          package structure.
+        </li>
+        <li>
+          Developed a secure NestJS REST API as the integration layer between
+          the Unity game client and Sui blockchain, implementing
+          backend-controlled minting authorization; prototyped Google OAuth
+          smart-wallet onboarding and learned sufficient Unity to create
+          proof-of-concept API communication, authentication, and end-to-end
+          minting validation before game developer handoff.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="hr-entry-sep" />
+
+    <!-- SKUNK CAPITAL -->
+    <div class="entry-block">
+      <div class="entry-header">
+        Skunk Capital &mdash; Algorithmic Trading Systems Engineer
+      </div>
+      <div class="entry-meta">
+        2017 &ndash; 2019 &nbsp;&middot;&nbsp; Crypto Cash-and-Carry Arbitrage
+        &nbsp;&middot;&nbsp; Remote / Perth, Australia
+      </div>
+      <ul class="resume-list">
+        <li>
+          Served as sole architect and developer of a
+          <strong
+            >profitable crypto cash-and-carry arbitrage trading system</strong
+          >
+          for Skunk Capital, exploiting pricing discrepancies between
+          cryptocurrency spot and futures markets; system operated with
+          <strong>approximately $100K USD in deployed capital</strong> and ran
+          continuously in production for sustained periods.
+        </li>
+        <li>
+          Built exchange-specific plugins for BitMEX, Bitfinex, Kraken, and
+          Binance, abstracting market data, authentication, order placement,
+          balance retrieval, rate-limit handling, retry behavior, and
+          venue-specific API differences behind a shared arbitrage execution
+          framework.
+        </li>
+        <li>
+          Implemented
+          <strong>automated two-leg cash-and-carry execution</strong> including
+          futures/spot basis detection, cost modeling (funding rates, borrow
+          costs, trading fees, slippage), automatic execution of both legs,
+          partial-fill handling, failed-leg recovery, retry logic, position
+          tracking, and unwind workflows.
+        </li>
+        <li>
+          Built NodeJS/AWS trading services on EC2 with MySQL-centered
+          persistence, WebSocket exchange feeds, ReactJS operational dashboard,
+          and homemade logging, monitoring, and alerting; hardened the system
+          against real exchange edge cases for reliable continuous production
+          operation.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="hr-entry-sep" />
+
+    <!-- ALTERYX -->
+    <div class="entry-block">
+      <div class="entry-header">Alteryx &mdash; Senior Engineer</div>
+      <div class="entry-meta">
+        Data and Analytics Platform &nbsp;&middot;&nbsp; C++
+      </div>
+      <ul class="resume-list">
+        <li>
+          Worked within a large, mature, and undocumented C++ framework
+          supporting complex data and analytics workloads; rapidly oriented in a
+          highly unfamiliar codebase and became independently productive.
+        </li>
+        <li>
+          Diagnosed and resolved production defects appearing in new and
+          non-obvious areas of the system; implemented and tested fixes across
+          multiple subsystems under production constraints.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="hr-section-sep" />
+
+    <!-- ══════════════════════════════ ADDITIONAL EXPERIENCE ══════════════════════════ -->
+    <div class="section-title">Additional Experience</div>
+    <hr class="hr-title-under" />
+    <ul class="resume-list">
+      <li>
+        Leeds Rising &mdash; Sole developer of an automated short-trading system
+        targeting US equity markets
+      </li>
+      <li>
+        Aquamonix &mdash; Backend engineering for an IoT-based water management
+        platform
+      </li>
+      <li>
+        Morgan Stanley &mdash; Software engineering in financial services
+        infrastructure
+      </li>
+      <li>
+        HotelTravel &mdash; Full-stack engineering for a hospitality / travel
+        e-commerce platform
+      </li>
+      <li>
+        Manao Software &mdash; Software engineering across agency and product
+        work
+      </li>
+    </ul>
+    <p class="compressed-note">
+      (Details intentionally compressed; full history available on request)
+    </p>
+
+    <hr class="hr-section-sep" />
+
+    <!-- ══════════════════════════════ OPERATING PRINCIPLES ══════════════════════════ -->
+    <div class="section-title">Operating Principles</div>
+    <hr class="hr-title-under" />
+    <ul class="resume-list">
+      <li>Own the outcome, not just the implementation</li>
+      <li>Design for failure modes before success cases</li>
+      <li>
+        Prefer irreversible correctness over reversible speed when capital is at
+        risk
+      </li>
+      <li>Direct and clear communication</li>
+      <li>Translate ambiguity into architecture, not assumptions</li>
+    </ul>
+
+    <hr class="hr-section-sep" />
+
+    <!-- ════════════════════════════ TOOLS & TECHNOLOGIES ════════════════════════════ -->
+    <div class="section-title">Tools &amp; Technologies (Selected)</div>
+    <hr class="hr-title-under" />
+    <ul class="resume-list">
+      <li>
+        Solidity, Rust, TypeScript, Python, JavaScript / Node.js, C++, Sui Move
+      </li>
+      <li>
+        Ethereum, Optimism, Arbitrum, Polygon, Solana, Bitcoin, Sui, EVM L2s
+      </li>
+      <li>
+        Foundry, Hardhat, Echidna, OpenZeppelin, UUPS proxy upgradeability
+      </li>
+      <li>Smart Contract Security, DeFi Protocol Design</li>
+      <li>
+        NestJS, FastAPI, MedusaJS, Express / Node.js, EventBridge/SQS, Kafka
+      </li>
+      <li>
+        React / Next.js, TypeScript, TanStack Query/Router, Tailwind CSS, Vite,
+        Zustand
+      </li>
+      <li>
+        PostgreSQL, Redis, DynamoDB, Google Bigtable, Amazon Timestream, MySQL
+      </li>
+      <li>
+        AWS (Lambda, ECS Fargate, SQS, SNS, EventBridge, Step Functions, Secrets
+        Manager, KMS, CloudWatch, CDK, S3)
+      </li>
+      <li>GCP (Secret Manager), Kubernetes, CI/CD</li>
+      <li>
+        Helius (LaserStream, enhanced transaction API), Jito, Jupiter, Pump.fun,
+        LiFi, Ethers.js v6
+      </li>
+      <li>
+        LLM Integration (Anthropic Claude, RAG, MCP, tool-augmented AI,
+        hallucination-prevention architecture)
+      </li>
+      <li>
+        Trading Infrastructure (market making, copy-trading, backtesting,
+        Optuna/Bayesian optimization, FIFO P&amp;L)
+      </li>
+      <li>Data Pipelines, Distributed Systems, Cloud Infrastructure</li>
+      <li>Full-Stack Systems</li>
+    </ul>
+
+    <hr class="hr-section-sep" />
+
+    <!-- ════════════════════════════════ AVAILABILITY ════════════════════════════════ -->
+    <div class="section-title">Availability</div>
+    <hr class="hr-title-under" />
+    <p class="body-text">
+      Open to senior/principal-level, CTO, or founding-engineer roles where
+      early ownership, architecture under risk, technical leadership, and
+      decision authority are required. Active across multiple client engagements
+      via Toptal.
+    </p>
+
+    <hr class="hr-section-sep" />
+
+    <!-- ════════════════════════════════ CITIZENSHIP ═════════════════════════════════ -->
+    <div class="section-title">Citizenship</div>
+    <hr class="hr-title-under" />
+    <p class="body-text">US Citizen</p>
+  </body>
+</html>
